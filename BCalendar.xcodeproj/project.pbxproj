@@ -15,6 +15,7 @@
 		2744573F237BF097006C8F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2744573D237BF097006C8F8C /* LaunchScreen.storyboard */; };
 		2744574A237BF097006C8F8C /* BCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27445749237BF097006C8F8C /* BCalendarTests.swift */; };
 		27445755237BF097006C8F8C /* BCalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27445754237BF097006C8F8C /* BCalendarUITests.swift */; };
+		27A157ED237E9D5300C55E1A /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A157EC237E9D5300C55E1A /* MonthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		27445750237BF097006C8F8C /* BCalendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BCalendarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27445754237BF097006C8F8C /* BCalendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCalendarUITests.swift; sourceTree = "<group>"; };
 		27445756237BF097006C8F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27A157EC237E9D5300C55E1A /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				2744573B237BF097006C8F8C /* Assets.xcassets */,
 				2744573D237BF097006C8F8C /* LaunchScreen.storyboard */,
 				27445740237BF097006C8F8C /* Info.plist */,
+				27A157EC237E9D5300C55E1A /* MonthView.swift */,
 			);
 			path = BCalendar;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				27445737237BF097006C8F8C /* ViewController.swift in Sources */,
 				27445733237BF097006C8F8C /* AppDelegate.swift in Sources */,
 				27445735237BF097006C8F8C /* SceneDelegate.swift in Sources */,
+				27A157ED237E9D5300C55E1A /* MonthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
