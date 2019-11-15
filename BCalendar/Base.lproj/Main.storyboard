@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qb2-2L-TRB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qun-GO-0F4">
-                                <rect key="frame" x="0.0" y="504" width="508" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDP-D0-R49">
@@ -105,6 +105,11 @@
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
+                                        <view key="backgroundView" contentMode="scaleToFill" id="IAx-Ww-tbE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="339.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="s99-Gu-weH">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -173,13 +178,33 @@
                                     <constraint firstItem="bDZ-1n-AyY" firstAttribute="centerX" secondItem="CD5-9h-fZF" secondAttribute="centerX" id="mGn-KU-h9y"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsH-la-nJ6">
+                                <rect key="frame" x="0.0" y="88" width="207" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynQ-iN-dCb">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="ynQ-iN-dCb" firstAttribute="top" secondItem="tsH-la-nJ6" secondAttribute="top" id="4xe-bb-Pwl"/>
+                                    <constraint firstAttribute="bottom" secondItem="ynQ-iN-dCb" secondAttribute="bottom" id="BaH-yU-3oL"/>
+                                    <constraint firstAttribute="trailing" secondItem="ynQ-iN-dCb" secondAttribute="trailing" id="Oxs-Da-brP"/>
+                                    <constraint firstItem="ynQ-iN-dCb" firstAttribute="leading" secondItem="tsH-la-nJ6" secondAttribute="leading" id="aU4-oa-oy3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="CD5-9h-fZF" firstAttribute="top" secondItem="oRf-oi-IGW" secondAttribute="bottom" id="0eO-M2-V0y"/>
                             <constraint firstItem="oRf-oi-IGW" firstAttribute="top" secondItem="IDP-D0-R49" secondAttribute="bottom" constant="10" id="2r1-eV-gOA"/>
                             <constraint firstItem="xW2-oR-Uuu" firstAttribute="bottom" secondItem="CD5-9h-fZF" secondAttribute="bottom" id="76d-yY-K2s"/>
+                            <constraint firstItem="oRf-oi-IGW" firstAttribute="top" secondItem="tsH-la-nJ6" secondAttribute="bottom" id="868-jL-3xD"/>
                             <constraint firstItem="CD5-9h-fZF" firstAttribute="leading" secondItem="xW2-oR-Uuu" secondAttribute="leading" id="BB1-T6-gBD"/>
+                            <constraint firstItem="tsH-la-nJ6" firstAttribute="width" secondItem="Qun-GO-0F4" secondAttribute="width" multiplier="0.5" id="Itr-KQ-4h4"/>
                             <constraint firstItem="Qun-GO-0F4" firstAttribute="top" secondItem="xW2-oR-Uuu" secondAttribute="top" id="MqY-wh-6NA"/>
                             <constraint firstItem="xW2-oR-Uuu" firstAttribute="trailing" secondItem="Qun-GO-0F4" secondAttribute="trailing" id="P3W-0p-4nf"/>
                             <constraint firstItem="xW2-oR-Uuu" firstAttribute="trailing" secondItem="IDP-D0-R49" secondAttribute="trailing" constant="20" id="R0Q-34-8XF"/>
@@ -188,7 +213,9 @@
                             <constraint firstItem="Qun-GO-0F4" firstAttribute="leading" secondItem="xW2-oR-Uuu" secondAttribute="leading" id="Zb4-mY-QyE"/>
                             <constraint firstItem="oRf-oi-IGW" firstAttribute="leading" secondItem="xW2-oR-Uuu" secondAttribute="leading" id="aOR-DY-OsA"/>
                             <constraint firstItem="oRf-oi-IGW" firstAttribute="height" secondItem="Qun-GO-0F4" secondAttribute="height" multiplier="50%" id="brG-Zw-Amj"/>
+                            <constraint firstItem="tsH-la-nJ6" firstAttribute="leading" secondItem="xW2-oR-Uuu" secondAttribute="leading" id="hKL-Ei-WVl"/>
                             <constraint firstItem="IDP-D0-R49" firstAttribute="width" secondItem="Qun-GO-0F4" secondAttribute="width" multiplier="20%" id="lam-gC-Kfv"/>
+                            <constraint firstItem="tsH-la-nJ6" firstAttribute="top" secondItem="xW2-oR-Uuu" secondAttribute="top" id="lll-v8-nYo"/>
                             <constraint firstItem="xW2-oR-Uuu" firstAttribute="trailing" secondItem="CD5-9h-fZF" secondAttribute="trailing" id="wxM-EA-zPy"/>
                             <constraint firstItem="xW2-oR-Uuu" firstAttribute="trailing" secondItem="oRf-oi-IGW" secondAttribute="trailing" id="zyJ-dN-O4f"/>
                         </constraints>
@@ -209,7 +236,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAi-Cu-1Yk">
-                                <rect key="frame" x="0.0" y="504" width="508" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4z-n5-0Pu">
                                 <rect key="frame" x="0.0" y="97" width="414" height="21"/>
@@ -221,7 +248,7 @@
                                 <rect key="frame" x="0.0" y="118" width="414" height="387"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="rHB-fq-MV2">
-                                        <rect key="frame" x="0.0" y="0.0" width="508" height="293"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="293"/>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ae-Dz-wAT">
                                         <rect key="frame" x="291" y="327" width="83" height="30"/>
@@ -248,7 +275,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="890-D6-Meu">
                                         <rect key="frame" x="25" y="12" width="364" height="214"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -327,7 +354,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zr-dE-3YO">
-                                <rect key="frame" x="0.0" y="460" width="508" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgP-h5-ok4">
                                 <rect key="frame" x="0.0" y="44" width="414" height="41"/>
@@ -367,7 +394,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yUh-9E-kXy">
-                                        <rect key="frame" x="0.0" y="45" width="414" height="203"/>
+                                        <rect key="frame" x="0.0" y="45" width="414" height="202.5"/>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zm6-6A-5YW">
                                         <rect key="frame" x="301" y="287.5" width="83" height="30"/>
