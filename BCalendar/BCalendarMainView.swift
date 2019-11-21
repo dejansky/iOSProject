@@ -1,32 +1,25 @@
 import UIKit
 
-//Variables, seperate file?
-let currentDate = Date()
-let userCalendar = Calendar.current
-
-let currentDay = userCalendar.component(.day, from: currentDate) //hämta date från användarens kalender
-let currentWeekDay = userCalendar.component(.weekday, from: currentDate)
-let currentMonth = userCalendar.component(.month, from: currentDate)
-
-
 
 
 class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
  
     
     @IBOutlet weak var calendarDays: UICollectionView!
-    @IBOutlet weak var currentMonth: UILabel!
+    @IBOutlet weak var currentMonthLabel: UILabel!
 
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     let weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
-    let monthEndDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    
+    var monthEndDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    var currentMonth = String()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currentMonth = months[]
+        currentMonth = months[currMonth]
+        
+        currentMonthLabel.text = "\(currentMonth) \(currYear)"
     }
     
 
@@ -39,11 +32,14 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return monthEndDays[currMonth]
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Calendar", for: indexPath) as! DateCollectionViewCell
+        cell.backgroudColor = UIColor.clear
+        cell.DateLabel
     }
 
 
