@@ -1,13 +1,17 @@
 import UIKit
 
+//Variables, seperate file?
+let currentDate = Date()
+let userCalendar = Calendar.current
+
+let currentDay = userCalendar.component(.day, from: currentDate) //hämta date från användarens kalender
+let currentWeekDay = userCalendar.component(.weekday, from: currentDate)
+let currentMonth = userCalendar.component(.month, from: currentDate)
+
+
+
+
 class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    //Variables, seperate file?
-    let currentDate = Date()
-    let calendar = Calendar.current
-    
-    let currentDay = Calendar.Component(.day, from:)
-    
  
     
     @IBOutlet weak var calendarDays: UICollectionView!
