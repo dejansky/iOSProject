@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--BCalendar-->
+        <!--BCalendarMainView-->
         <scene sceneID="G8h-PR-Lk7">
             <objects>
-                <viewController id="3dz-DJ-XMa" sceneMemberID="viewController">
+                <viewController id="3dz-DJ-XMa" userLabel="BCalendarMainView" customClass="BCalendarMainView" customModule="BCalendar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0K5-WT-Lyr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,10 +227,10 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="143.97321428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--AddEventView-->
         <scene sceneID="lIh-zg-b6b">
             <objects>
-                <viewController id="pwK-Wd-PR1" sceneMemberID="viewController">
+                <viewController id="pwK-Wd-PR1" userLabel="AddEventView" customClass="AddEventView" customModule="BCalendar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xOX-fK-vp5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -345,10 +345,10 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="143.97321428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--PreviewEventView-->
         <scene sceneID="adu-Qy-wm9">
             <objects>
-                <viewController id="K5o-ma-eSP" sceneMemberID="viewController">
+                <viewController id="K5o-ma-eSP" userLabel="PreviewEventView" customClass="PreviewEventView" customModule="BCalendar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RGF-Jz-hbi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
