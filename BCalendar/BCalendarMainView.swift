@@ -25,9 +25,40 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
 
    
     @IBAction func nextMonth(_ sender: Any) {
+        switch currentMonth {
+        case "Dec":
+            currMonth = 0
+            currYear += 1
+            
+            currentMonthLabel.text = "\(currentMonth) \(currYear)"
+            calendarDays.reloadData()
+            
+        default:
+            
+            currMonth += 1
+            currentMonthLabel.text = "\(currentMonth) \(currYear)"
+            calendarDays.reloadData()
+            
+        }
     }
     
     @IBAction func prevMonth(_ sender: Any) {
+        
+        switch currentMonth {
+        case "Jan":
+            currMonth = 11
+            currYear -= 1
+            
+            currentMonthLabel.text = "\(currentMonth) \(currYear)"
+            calendarDays.reloadData()
+        default:
+            
+            currMonth -= 1
+            
+            currentMonthLabel.text = "\(currentMonth) \(currYear)"
+            calendarDays.reloadData()
+        }
+        
     }
     
 
