@@ -38,8 +38,10 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Calendar", for: indexPath) as! DateCollectionViewCell
-        cell.backgroudColor = UIColor.clear
-        cell.DateLabel
+        cell.backgroundColor = UIColor.clear
+        cell.DateLabel.text = "\(indexPath.row + 1)"
+        
+        return cell
     }
 
 
