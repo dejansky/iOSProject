@@ -39,6 +39,9 @@
                                         <state key="normal" title="&gt;">
                                             <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="nextMonth:" destination="3dz-DJ-XMa" eventType="touchUpInside" id="jZE-vA-xjC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR1-B6-2Jg">
                                         <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
@@ -46,6 +49,9 @@
                                         <state key="normal" title="&lt;">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="prevMonth:" destination="3dz-DJ-XMa" eventType="touchUpInside" id="pcS-j7-BTp"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIv-WY-gn6">
                                         <rect key="frame" x="62" y="0.0" width="290" height="30"/>
@@ -111,7 +117,7 @@
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </view>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DateCollectionViewCell" id="s99-Gu-weH" customClass="DateCollectionViewCell" customModule="BCalendar" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Calendar" id="s99-Gu-weH" customClass="DateCollectionViewCell" customModule="BCalendar" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="y9C-do-1IA">
@@ -242,6 +248,7 @@
                     <connections>
                         <outlet property="calendarDays" destination="NRQ-jM-ZKy" id="gca-6g-XTL"/>
                         <outlet property="currentMonth" destination="eIv-WY-gn6" id="u7Z-kl-9kp"/>
+                        <outlet property="currentMonthLabel" destination="eIv-WY-gn6" id="8gu-f4-7Nl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmZ-k1-0zW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
