@@ -28,24 +28,26 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentMonth = months[currMonth] //Fetch and store data from Date.currMonth
+        currentMonthLabel.text = "\(currentMonth) \(currYear)" //Display the month label with combination of current month and year
         
-        currentMonth = months[currMonth]
-        
-        currentMonthLabel.text = "\(currentMonth) \(currYear)"
+        Direction = 0
+        GetStartDayDatePosition()
     }
     
 
    
     @IBAction func nextMonth(_ sender: Any) {
+        
         switch currentMonth {
-        case "Dec":
-            currMonth = 0
-            currYear += 1
-            Direction = 1
+        case "Dec": // In case the currentMont is December applythe following rules
+            currMonth = 0 // Set the current month to 0
+            currYear += 1 // Add 1 to the current year property in Date.currYear
+            Direction = 1 // Defining the direction of wich the GetStartDayDatePositio should follow
             
-            GetStartDayDatePosition()
+            GetStartDayDatePosition() //Cilling the func
             
-            currentMonth = months[currMonth]
+            currentMonth = months[currMonth] //
             currentMonthLabel.text = "\(currentMonth) \(currYear)"
             calendarDays.reloadData()
             
@@ -93,6 +95,8 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     func GetStartDayDatePosition() {
         switch Direction {
         case 0:
+            
+            print("Case 0 PositionIndex value: %d", PositionIndex)
             switch currDay {
             case 1...7:
                 NumberOfEmptyBox = currWeekDay - currDay
@@ -110,9 +114,11 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             PositionIndex = NumberOfEmptyBox
             
         case 1...:
+            print("Case 1 PositionIndex value: %d", PositionIndex)
             NextNumberOfEmptyBox = (PositionIndex + monthEndDays[currMonth]) % 7
             PositionIndex = NextNumberOfEmptyBox
         case -1:
+            print("Case -1 PositionIndex value: %d", PositionIndex)
             PreviousNumberOfEmptyBox = (7 - (monthEndDays[currMonth] - PositionIndex)%7)
             if PreviousNumberOfEmptyBox == 7 {
                 PreviousNumberOfEmptyBox = 0
@@ -142,6 +148,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Calendar", for: indexPath) as! DateCollectionViewCell
         cell.backgroundColor = UIColor.clear
+        
         switch Direction {
         case 0:
             cell.DateLabel.text = "\(indexPath.row + 1 - NumberOfEmptyBox)"
