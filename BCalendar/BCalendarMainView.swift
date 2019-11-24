@@ -31,8 +31,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         currentMonth = months[currMonth] //Fetch and store data from Date.currMonth
         currentMonthLabel.text = "\(currentMonth) \(currYear)" //Display the month label with combination of current month and year
         
-        Direction = 0
-        GetStartDayDatePosition()
+        calendarDays.reloadData()
     }
     
 
@@ -96,7 +95,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         switch Direction {
         case 0:
             
-            print("Case 0 PositionIndex value: %d", PositionIndex)
+            print("Case 0 PositionIndex value:", PositionIndex)
             switch currDay {
             case 1...7:
                 NumberOfEmptyBox = currWeekDay - currDay
@@ -114,11 +113,11 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             PositionIndex = NumberOfEmptyBox
             
         case 1...:
-            print("Case 1 PositionIndex value: %d", PositionIndex)
+            print("Case 1 PositionIndex value:", PositionIndex)
             NextNumberOfEmptyBox = (PositionIndex + monthEndDays[currMonth]) % 7
             PositionIndex = NextNumberOfEmptyBox
         case -1:
-            print("Case -1 PositionIndex value: %d", PositionIndex)
+            print("Case -1 PositionIndex value:", PositionIndex)
             PreviousNumberOfEmptyBox = (7 - (monthEndDays[currMonth] - PositionIndex)%7)
             if PreviousNumberOfEmptyBox == 7 {
                 PreviousNumberOfEmptyBox = 0
@@ -147,7 +146,14 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Calendar", for: indexPath) as! DateCollectionViewCell
+        
         cell.backgroundColor = UIColor.clear
+        
+        cell.DateLabel.textColor = UIColor.black
+        
+        if cell.isHidden {
+            cell.isHidden = false
+        }
         
         switch Direction {
         case 0:
@@ -159,6 +165,24 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         default:
             fatalError()
         }
+        
+        if Int(cell.DateLabel.text!)! < 1 {
+            cell.isHidden = true
+        }
+        
+        switch indexPath.row {
+        case 5,6,12,13,19,20,26,27,33,34:
+            if Int(cell.DateLabel.text!)! > 0 {
+                cell.DateLabel.textColor = UIColor.lightGray
+            }
+        default:
+            break
+        }
+        
+        if currentMonth == months[currMonth] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay{
+            cell.backgroundColor = UIColor.red 
+        }
+        
         
         return cell
     }

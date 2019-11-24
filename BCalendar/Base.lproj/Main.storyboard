@@ -114,7 +114,6 @@
                                         <view key="backgroundView" contentMode="scaleToFill" id="IAx-Ww-tbE">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="336"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Calendar" id="s99-Gu-weH" customClass="DateCollectionViewCell" customModule="BCalendar" customModuleProvider="target">
