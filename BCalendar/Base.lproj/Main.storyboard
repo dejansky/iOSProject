@@ -254,6 +254,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="BCalendar" id="xzT-Ar-rIq"/>
                     <connections>
+                        <outlet property="CityNameLabel" destination="EHc-Oy-LmE" id="hOL-o1-b1X"/>
+                        <outlet property="ConditionLabel" destination="oAG-EH-OyK" id="Cwj-zt-T6Z"/>
+                        <outlet property="DegreesLabel" destination="0XX-qq-xjf" id="LvF-Vi-1Aq"/>
                         <outlet property="calendarDays" destination="NRQ-jM-ZKy" id="gca-6g-XTL"/>
                         <outlet property="currentMonthLabel" destination="eIv-WY-gn6" id="QXl-58-mqN"/>
                     </connections>
