@@ -23,7 +23,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     
     var PositionIndex = 0
     
-    var LeapYearCounter = 0
+    var LeapYearCounter = 2
     
     var DayCounter = 0
     
@@ -60,9 +60,21 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         default:
             Direction = 1
             
+            
             GetStartDayDatePosition()
             
             currMonth += 1
+            
+            if LeapYearCounter < 5 {
+                LeapYearCounter += 1
+            }
+            if LeapYearCounter == 4{
+                monthEndDays[1] = 29
+            }
+            if LeapYearCounter == 5{
+                LeapYearCounter = 1
+                monthEndDays[1] = 28
+            }
             
             currentMonth = months[currMonth]
             currentMonthLabel.text = "\(currentMonth) \(currYear)"
@@ -78,7 +90,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             currMonth = 11
             currYear -= 1
             Direction = -1
-            
+                   
             GetStartDayDatePosition()
             
             currentMonth = months[currMonth]
@@ -88,6 +100,17 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             
             currMonth -= 1
             Direction = -1
+            
+            if LeapYearCounter > 0 {
+                LeapYearCounter -= 1
+            }
+            if LeapYearCounter == 0{
+                monthEndDays[1] = 29
+                LeapYearCounter = 4
+            }
+            else {
+                monthEndDays[1] = 28
+            }
             
             GetStartDayDatePosition()
             
@@ -179,8 +202,9 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             break
         }
         
-        if currentMonth == months[currMonth] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay{
-            cell.backgroundColor = UIColor.red 
+        
+        if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox {
+            cell.backgroundColor = UIColor.red
         }
         
         
