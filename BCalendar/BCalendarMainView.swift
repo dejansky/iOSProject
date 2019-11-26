@@ -23,6 +23,10 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     
     var PositionIndex = 0
     
+    var LeapYearCounter = 0
+    
+    var DayCounter = 0
+    
     
 
     
@@ -31,7 +35,10 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         currentMonth = months[currMonth] //Fetch and store data from Date.currMonth
         currentMonthLabel.text = "\(currentMonth) \(currYear)" //Display the month label with combination of current month and year
         
-        calendarDays.reloadData()
+        if currWeekDay == 0 {
+            currWeekDay = 7
+        }
+        GetStartDayDatePosition()
     }
     
 
@@ -94,30 +101,23 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     func GetStartDayDatePosition() {
         switch Direction {
         case 0:
-            
-            print("Case 0 PositionIndex value:", PositionIndex)
-            switch currDay {
-            case 1...7:
-                NumberOfEmptyBox = currWeekDay - currDay
-            case 8...14:
-                NumberOfEmptyBox = currWeekDay - currDay - 7
-            case 15...21:
-                NumberOfEmptyBox = currWeekDay - currDay - 14
-            case 22...28:
-                NumberOfEmptyBox = currWeekDay - currDay - 21
-            case 29...31:
-                NumberOfEmptyBox = currWeekDay - currDay - 28
-            default:
-                break
+            NumberOfEmptyBox = currWeekDay
+            DayCounter = currDay
+            while DayCounter > 0 {
+                NumberOfEmptyBox = NumberOfEmptyBox - 1
+                DayCounter = DayCounter - 1
+                if NumberOfEmptyBox == 0 {
+                    NumberOfEmptyBox = 7
+                }
+            }
+            if NumberOfEmptyBox == 7 {
+                NumberOfEmptyBox = 0
             }
             PositionIndex = NumberOfEmptyBox
-            
         case 1...:
-            print("Case 1 PositionIndex value:", PositionIndex)
             NextNumberOfEmptyBox = (PositionIndex + monthEndDays[currMonth]) % 7
             PositionIndex = NextNumberOfEmptyBox
         case -1:
-            print("Case -1 PositionIndex value:", PositionIndex)
             PreviousNumberOfEmptyBox = (7 - (monthEndDays[currMonth] - PositionIndex)%7)
             if PreviousNumberOfEmptyBox == 7 {
                 PreviousNumberOfEmptyBox = 0
