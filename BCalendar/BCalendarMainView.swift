@@ -44,12 +44,9 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         currentMonth = months[currMonth] //Fetch and store data from Date.currMonth
         currentMonthLabel.text = "\(currentMonth) \(currYear)" //Display the month label with combination of current month and year
         if currWeekDay == 0 {
-                currWeekDay = 7
-            }
-            GetStartDayDatePosition()
-        
-        calendarDays.reloadData()
-
+            currWeekDay = 7
+        }
+        GetStartDayDatePosition()
         
         // MARK: - WeatherView
         guard let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?id=2702977&APPID=91b573073a4edc370f7a687f0f5c60fe") else {return}
@@ -68,7 +65,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             }
         }
         task.resume()
-
     }
     
         
