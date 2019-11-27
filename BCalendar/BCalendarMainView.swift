@@ -41,8 +41,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
 
         
         // MARK: - WeatherView
-        CityNameLabel.text = "Jönköping"
-        guard let url = URL(string: "http://api.openweathermap.org/data/2.5/forecast?id=2702977&APPID=91b573073a4edc370f7a687f0f5c60fe") else {return}
+        guard let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?id=2702977&APPID=91b573073a4edc370f7a687f0f5c60fe") else {return}
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data, error == nil {
                 do {
@@ -58,15 +57,21 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             }
         }
         task.resume()
+
     }
     
         
     // MARK: - Weather
     func setWeather(weather: String?, description: String?, temp: Int ) {
         ConditionLabel.text = description ?? "..."
-        DegreesLabel.text = "\(temp) °C"
+        DegreesLabel.text = "\(KelvinToCelcius(temp: temp)) °C"
+        CityNameLabel.text = "Jönköping"
     }
     
+    func KelvinToCelcius(temp: Int) -> Int{
+        let temp = temp - 273
+        return temp
+    }
     
     // MARK: - Date
     @IBAction func nextMonth(_ sender: Any) {
