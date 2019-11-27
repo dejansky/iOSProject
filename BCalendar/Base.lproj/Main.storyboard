@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qb2-2L-TRB">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -21,7 +21,7 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDP-D0-R49">
-                                <rect key="frame" x="311.33333333333331" y="103" width="82.666666666666686" height="30"/>
+                                <rect key="frame" x="311" y="103" width="83" height="30"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="+ Add">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -34,7 +34,7 @@
                                 <rect key="frame" x="0.0" y="143" width="414" height="387"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-we-NZC">
-                                        <rect key="frame" x="351.66666666666669" y="0.0" width="62.333333333333314" height="30"/>
+                                        <rect key="frame" x="352" y="0.0" width="62" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="&gt;">
                                             <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -54,7 +54,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIv-WY-gn6">
-                                        <rect key="frame" x="62" y="0.0" width="289.66666666666669" height="30"/>
+                                        <rect key="frame" x="62" y="0.0" width="290" height="30"/>
                                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
@@ -67,37 +67,37 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPK-NY-OJb">
-                                        <rect key="frame" x="59" y="30" width="59.333333333333343" height="21"/>
+                                        <rect key="frame" x="59" y="30" width="59" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0f-pC-eBL">
-                                        <rect key="frame" x="118.33333333333331" y="30" width="59" height="21"/>
+                                        <rect key="frame" x="118" y="30" width="59.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Th" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R07-cl-Um4">
-                                        <rect key="frame" x="177.33333333333334" y="30" width="59" height="21"/>
+                                        <rect key="frame" x="177.5" y="30" width="59" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPD-s1-Zcw">
-                                        <rect key="frame" x="236.33333333333334" y="30" width="59.333333333333343" height="21"/>
+                                        <rect key="frame" x="236.5" y="30" width="59" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Su" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kID-pL-Jli">
-                                        <rect key="frame" x="355" y="29.666666666666657" width="59" height="21"/>
+                                        <rect key="frame" x="355" y="29.5" width="59" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24a-c0-gB6">
-                                        <rect key="frame" x="295.66666666666669" y="30" width="59" height="20.666666666666671"/>
+                                        <rect key="frame" x="295.5" y="30" width="59" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -124,7 +124,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tx-GA-lhH">
-                                                            <rect key="frame" x="4" y="14.666666666666666" width="42" height="20.666666666666671"/>
+                                                            <rect key="frame" x="4" y="14.5" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -189,7 +189,7 @@
                                 <rect key="frame" x="0.0" y="530" width="414" height="332"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDZ-1n-AyY">
-                                        <rect key="frame" x="124.33333333333333" y="245.66666666666663" width="165.33333333333337" height="40"/>
+                                        <rect key="frame" x="124" y="245.5" width="166" height="40"/>
                                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Edit event">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -254,6 +254,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="BCalendar" id="xzT-Ar-rIq"/>
                     <connections>
+                        <outlet property="CityNameLabel" destination="EHc-Oy-LmE" id="hOL-o1-b1X"/>
+                        <outlet property="ConditionLabel" destination="oAG-EH-OyK" id="Cwj-zt-T6Z"/>
+                        <outlet property="DegreesLabel" destination="0XX-qq-xjf" id="LvF-Vi-1Aq"/>
                         <outlet property="calendarDays" destination="NRQ-jM-ZKy" id="gca-6g-XTL"/>
                         <outlet property="currentMonthLabel" destination="eIv-WY-gn6" id="QXl-58-mqN"/>
                     </connections>
@@ -277,36 +280,35 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="387"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VEW-TZ-T1X">
-                                        <rect key="frame" x="0.0" y="10" width="414" height="232.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="10" width="414" height="232"/>
                                     </datePicker>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The date picked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zH6-LN-Cfe">
-                                        <rect key="frame" x="0.0" y="242.33333333333331" width="414" height="27"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOH-ma-EcK">
-                                        <rect key="frame" x="290.66666666666669" y="298.33333333333331" width="103.33333333333331" height="38.666666666666686"/>
+                                        <rect key="frame" x="290.5" y="298.5" width="103.5" height="38.5"/>
                                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Confirm">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date and time picked" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qbD-gt-TcT">
+                                        <rect key="frame" x="8" y="256" width="398" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="zH6-LN-Cfe" secondAttribute="trailing" id="4Kt-c4-k1O"/>
-                                    <constraint firstItem="zH6-LN-Cfe" firstAttribute="height" secondItem="IZd-vZ-zPH" secondAttribute="height" multiplier="7%" id="8bY-yI-eDD"/>
+                                    <constraint firstItem="KOH-ma-EcK" firstAttribute="top" secondItem="qbD-gt-TcT" secondAttribute="bottom" constant="8.5" id="6hT-dL-Pn5"/>
                                     <constraint firstAttribute="bottom" secondItem="KOH-ma-EcK" secondAttribute="bottom" constant="50" id="9n8-sX-ud2"/>
                                     <constraint firstItem="VEW-TZ-T1X" firstAttribute="height" secondItem="IZd-vZ-zPH" secondAttribute="height" multiplier="60%" id="K5o-4c-oOI"/>
                                     <constraint firstAttribute="trailing" secondItem="VEW-TZ-T1X" secondAttribute="trailing" id="LDM-KZ-HCq"/>
                                     <constraint firstItem="VEW-TZ-T1X" firstAttribute="top" secondItem="IZd-vZ-zPH" secondAttribute="top" constant="10" id="MJ8-li-ZB1"/>
                                     <constraint firstItem="KOH-ma-EcK" firstAttribute="width" secondItem="IZd-vZ-zPH" secondAttribute="width" multiplier="25%" id="cBW-ss-jRE"/>
-                                    <constraint firstItem="zH6-LN-Cfe" firstAttribute="leading" secondItem="IZd-vZ-zPH" secondAttribute="leading" id="efN-Bq-u5b"/>
-                                    <constraint firstItem="zH6-LN-Cfe" firstAttribute="top" secondItem="VEW-TZ-T1X" secondAttribute="bottom" id="f8p-kv-ar6"/>
+                                    <constraint firstItem="qbD-gt-TcT" firstAttribute="top" secondItem="VEW-TZ-T1X" secondAttribute="bottom" constant="13.67" id="dTp-rM-vdT"/>
                                     <constraint firstItem="KOH-ma-EcK" firstAttribute="height" secondItem="IZd-vZ-zPH" secondAttribute="height" multiplier="10%" id="lT7-Ef-UMm"/>
                                     <constraint firstAttribute="trailing" secondItem="KOH-ma-EcK" secondAttribute="trailing" constant="20" id="lkW-WR-AF8"/>
+                                    <constraint firstItem="qbD-gt-TcT" firstAttribute="leading" secondItem="IZd-vZ-zPH" secondAttribute="leading" constant="8" id="mMC-uV-YB7"/>
+                                    <constraint firstAttribute="trailing" secondItem="qbD-gt-TcT" secondAttribute="trailing" constant="8" id="nrw-bO-1hb"/>
                                     <constraint firstItem="VEW-TZ-T1X" firstAttribute="leading" secondItem="IZd-vZ-zPH" secondAttribute="leading" id="uVO-MH-K66"/>
                                 </constraints>
                             </view>
@@ -314,7 +316,7 @@
                                 <rect key="frame" x="0.0" y="475" width="414" height="387"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tHM-1l-rhN">
-                                        <rect key="frame" x="15" y="10" width="384" height="232.33333333333334"/>
+                                        <rect key="frame" x="15" y="10" width="384" height="232"/>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -322,7 +324,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r67-ha-KQ6">
-                                        <rect key="frame" x="138.66666666666669" y="309.66666666666663" width="136.66666666666669" height="38.666666666666686"/>
+                                        <rect key="frame" x="138.5" y="309.5" width="137" height="39"/>
                                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <state key="normal" title="Create Event">
@@ -364,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhP-6L-2ey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2310" y="-414"/>
+            <point key="canvasLocation" x="2307.2463768115945" y="-414.50892857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mb7-ud-JrP">
@@ -405,7 +407,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="409"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KjP-c5-ECg">
-                                        <rect key="frame" x="10" y="20" width="394" height="327.33333333333331"/>
+                                        <rect key="frame" x="10" y="20" width="394" height="327"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -413,7 +415,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:Time ..etc " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQD-Gg-2S2">
-                                        <rect key="frame" x="0.0" y="347.33333333333331" width="414" height="61.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="347" width="414" height="62"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -435,10 +437,10 @@
                                 <rect key="frame" x="0.0" y="497" width="414" height="365"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0GG-YZ-AaV">
-                                        <rect key="frame" x="0.0" y="9.9999999999999858" width="414" height="255.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="10" width="414" height="255.5"/>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6L5-xX-3J3">
-                                        <rect key="frame" x="155.33333333333334" y="292" width="103.33333333333334" height="36.666666666666686"/>
+                                        <rect key="frame" x="155.5" y="292" width="103.5" height="36.5"/>
                                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Edit">

@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271790E9238D5ECB00C96377 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 271790E8238D5ECB00C96377 /* Kingfisher */; };
 		27445733237BF097006C8F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27445732237BF097006C8F8C /* AppDelegate.swift */; };
 		27445735237BF097006C8F8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27445734237BF097006C8F8C /* SceneDelegate.swift */; };
-		27445737237BF097006C8F8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27445736237BF097006C8F8C /* ViewController.swift */; };
 		2744573A237BF097006C8F8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27445738237BF097006C8F8C /* Main.storyboard */; };
 		2744573C237BF097006C8F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2744573B237BF097006C8F8C /* Assets.xcassets */; };
 		2744573F237BF097006C8F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2744573D237BF097006C8F8C /* LaunchScreen.storyboard */; };
@@ -43,7 +43,6 @@
 		2744572F237BF097006C8F8C /* BCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27445732237BF097006C8F8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27445734237BF097006C8F8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		27445736237BF097006C8F8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27445739237BF097006C8F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2744573B237BF097006C8F8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2744573E237BF097006C8F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271790E9238D5ECB00C96377 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,13 +114,12 @@
 				FDAF1F922386CB3400494706 /* BCalendarMainView.swift */,
 				27445732237BF097006C8F8C /* AppDelegate.swift */,
 				27445734237BF097006C8F8C /* SceneDelegate.swift */,
-				27445736237BF097006C8F8C /* ViewController.swift */,
 				FDAF1F962386CBD900494706 /* PreviewEventView.swift */,
+				83CA9F122387DC7300EC8F7B /* DateCollectionViewCell.swift */,
 				27445738237BF097006C8F8C /* Main.storyboard */,
 				2744573B237BF097006C8F8C /* Assets.xcassets */,
 				2744573D237BF097006C8F8C /* LaunchScreen.storyboard */,
 				27445740237BF097006C8F8C /* Info.plist */,
-				83CA9F122387DC7300EC8F7B /* DateCollectionViewCell.swift */,
 			);
 			path = BCalendar;
 			sourceTree = "<group>";
@@ -159,6 +158,9 @@
 			dependencies = (
 			);
 			name = BCalendar;
+			packageProductDependencies = (
+				271790E8238D5ECB00C96377 /* Kingfisher */,
+			);
 			productName = BCalendar;
 			productReference = 2744572F237BF097006C8F8C /* BCalendar.app */;
 			productType = "com.apple.product-type.application";
@@ -231,6 +233,9 @@
 				Base,
 			);
 			mainGroup = 27445726237BF097006C8F8C;
+			packageReferences = (
+				271790E7238D5ECB00C96377 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 27445730237BF097006C8F8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -275,7 +280,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CAE8292386F759002C08A8 /* CalendarVars.swift in Sources */,
-				27445737237BF097006C8F8C /* ViewController.swift in Sources */,
 				FDAF1F952386CB6500494706 /* AddEventView.swift in Sources */,
 				FDAF1F932386CB3400494706 /* BCalendarMainView.swift in Sources */,
 				83CA9F132387DC7300EC8F7B /* DateCollectionViewCell.swift in Sources */,
@@ -604,6 +608,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		271790E7238D5ECB00C96377 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		271790E8238D5ECB00C96377 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 271790E7238D5ECB00C96377 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 27445727237BF097006C8F8C /* Project object */;
 }

@@ -1,10 +1,10 @@
 import UIKit
-
+import Kingfisher
 
 
 class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
  
-    
+ 
     @IBOutlet weak var calendarDays: UICollectionView!
     @IBOutlet weak var currentMonthLabel: UILabel!
 
@@ -14,13 +14,9 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     var currentMonth = String()
     
     var NumberOfEmptyBox = Int()
-    
     var NextNumberOfEmptyBox = Int()
-    
     var PreviousNumberOfEmptyBox = 0
-    
     var Direction = 0
-    
     var PositionIndex = 0
     
     var LeapYearCounter = 2
@@ -29,17 +25,68 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     
     
 
+       
+    
+    @IBOutlet weak var CityNameLabel: UILabel!
+    @IBOutlet weak var ConditionLabel: UILabel!
+    @IBOutlet weak var DegreesLabel: UILabel!
+    
+    
+// https://api.darksky.net/forecast/d0e7d944730e01b0c906f2d0c8f34b2a/57.78145,14.15618
+//     91b573073a4edc370f7a687f0f5c60fe
+    
+   
     
     override func viewDidLoad() {
+        
+        // MARK: - DateView
         super.viewDidLoad()
         currentMonth = months[currMonth] //Fetch and store data from Date.currMonth
         currentMonthLabel.text = "\(currentMonth) \(currYear)" //Display the month label with combination of current month and year
-        
         if currWeekDay == 0 {
-            currWeekDay = 7
+                currWeekDay = 7
+            }
+            GetStartDayDatePosition()
+        
+        calendarDays.reloadData()
+
+        
+        // MARK: - WeatherView
+        guard let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?id=2702977&APPID=91b573073a4edc370f7a687f0f5c60fe") else {return}
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let data = data, error == nil {
+                do {
+                    guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String : Any] else { return }
+                    guard let weatherDetails = json["weather"] as? [[String: Any]], let weatherMain = json["main"] as? [String: Any] else {return}
+                    let temp = Int(weatherMain["temp"] as? Double ?? 0)
+                    let description = (weatherDetails.first?["description"] as? String)
+                    DispatchQueue.main.async {
+                        self.setWeather(weather: weatherDetails.first?["main"] as? String, description: description, temp: temp)
+                    }
+                    
+                } catch { print("Error fetching data...") }
+            }
         }
-        GetStartDayDatePosition()
+        task.resume()
+
     }
+    
+        
+    // MARK: - Weather
+    func setWeather(weather: String?, description: String?, temp: Int ) {
+        ConditionLabel.text = description ?? "..."
+        DegreesLabel.text = "\(KelvinToCelcius(temp: temp)) °C"
+        CityNameLabel.text = "Jönköping"
+    }
+    
+    func KelvinToCelcius(temp: Int) -> Int{
+        let temp = temp - 273
+        return temp
+        
+    }
+    // MARK: - Date
+        
+        
     
 
    
@@ -62,7 +109,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             
             
             GetStartDayDatePosition()
-            
             currMonth += 1
             
             if LeapYearCounter < 5 {
@@ -82,6 +128,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             
         }
     }
+    
     
     @IBAction func prevMonth(_ sender: Any) {
         
@@ -212,4 +259,5 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     }
 
 
+    
 }
