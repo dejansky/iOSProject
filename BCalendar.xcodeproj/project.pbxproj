@@ -17,6 +17,11 @@
 		27445755237BF097006C8F8C /* BCalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27445754237BF097006C8F8C /* BCalendarUITests.swift */; };
 		27CAE8292386F759002C08A8 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CAE8282386F759002C08A8 /* CalendarVars.swift */; };
 		83CA9F132387DC7300EC8F7B /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA9F122387DC7300EC8F7B /* DateCollectionViewCell.swift */; };
+		FD3FC596238EC3940053E84F /* EventClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FC595238EC3940053E84F /* EventClass.swift */; };
+		FD3FC599238F52A20053E84F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD3FC597238F52A20053E84F /* DataModel.xcdatamodeld */; };
+		FD3FC5DF238F56950053E84F /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FC5DD238F56950053E84F /* Event+CoreDataClass.swift */; };
+		FD3FC5E0238F56950053E84F /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FC5DE238F56950053E84F /* Event+CoreDataProperties.swift */; };
+		FD3FC5E3238F56E00053E84F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3FC5E2238F56E00053E84F /* CoreData.framework */; };
 		FDAF1F932386CB3400494706 /* BCalendarMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF1F922386CB3400494706 /* BCalendarMainView.swift */; };
 		FDAF1F952386CB6500494706 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF1F942386CB6500494706 /* AddEventView.swift */; };
 		FDAF1F972386CBD900494706 /* PreviewEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF1F962386CBD900494706 /* PreviewEventView.swift */; };
@@ -55,6 +60,11 @@
 		27445756237BF097006C8F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27CAE8282386F759002C08A8 /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
 		83CA9F122387DC7300EC8F7B /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		FD3FC595238EC3940053E84F /* EventClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventClass.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FD3FC598238F52A20053E84F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		FD3FC5DD238F56950053E84F /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FD3FC5DE238F56950053E84F /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FD3FC5E2238F56E00053E84F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FDAF1F922386CB3400494706 /* BCalendarMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCalendarMainView.swift; sourceTree = "<group>"; };
 		FDAF1F942386CB6500494706 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
 		FDAF1F962386CBD900494706 /* PreviewEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewEventView.swift; sourceTree = "<group>"; };
@@ -65,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3FC5E3238F56E00053E84F /* CoreData.framework in Frameworks */,
 				271790E9238D5ECB00C96377 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +104,7 @@
 				27445748237BF097006C8F8C /* BCalendarTests */,
 				27445753237BF097006C8F8C /* BCalendarUITests */,
 				27445730237BF097006C8F8C /* Products */,
+				FD3FC5E1238F56E00053E84F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,10 +128,14 @@
 				27445734237BF097006C8F8C /* SceneDelegate.swift */,
 				FDAF1F962386CBD900494706 /* PreviewEventView.swift */,
 				83CA9F122387DC7300EC8F7B /* DateCollectionViewCell.swift */,
+				FD3FC5DD238F56950053E84F /* Event+CoreDataClass.swift */,
+				FD3FC5DE238F56950053E84F /* Event+CoreDataProperties.swift */,
 				27445738237BF097006C8F8C /* Main.storyboard */,
+				FD3FC595238EC3940053E84F /* EventClass.swift */,
 				2744573B237BF097006C8F8C /* Assets.xcassets */,
 				2744573D237BF097006C8F8C /* LaunchScreen.storyboard */,
 				27445740237BF097006C8F8C /* Info.plist */,
+				FD3FC597238F52A20053E84F /* DataModel.xcdatamodeld */,
 			);
 			path = BCalendar;
 			sourceTree = "<group>";
@@ -140,6 +156,14 @@
 				27445756237BF097006C8F8C /* Info.plist */,
 			);
 			path = BCalendarUITests;
+			sourceTree = "<group>";
+		};
+		FD3FC5E1238F56E00053E84F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD3FC5E2238F56E00053E84F /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,11 +303,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3FC5E0238F56950053E84F /* Event+CoreDataProperties.swift in Sources */,
 				27CAE8292386F759002C08A8 /* CalendarVars.swift in Sources */,
 				FDAF1F952386CB6500494706 /* AddEventView.swift in Sources */,
+				FD3FC5DF238F56950053E84F /* Event+CoreDataClass.swift in Sources */,
 				FDAF1F932386CB3400494706 /* BCalendarMainView.swift in Sources */,
+				FD3FC596238EC3940053E84F /* EventClass.swift in Sources */,
 				83CA9F132387DC7300EC8F7B /* DateCollectionViewCell.swift in Sources */,
 				FDAF1F972386CBD900494706 /* PreviewEventView.swift in Sources */,
+				FD3FC599238F52A20053E84F /* DataModel.xcdatamodeld in Sources */,
 				27445733237BF097006C8F8C /* AppDelegate.swift in Sources */,
 				27445735237BF097006C8F8C /* SceneDelegate.swift in Sources */,
 			);
@@ -627,6 +655,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		FD3FC597238F52A20053E84F /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FD3FC598238F52A20053E84F /* DataModel.xcdatamodel */,
+			);
+			currentVersion = FD3FC598238F52A20053E84F /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 27445727237BF097006C8F8C /* Project object */;
 }

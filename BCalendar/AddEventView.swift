@@ -8,7 +8,6 @@ class AddEventView: UIViewController {
     @IBOutlet weak var DateTimeField: UITextField!
     @IBOutlet weak var eventDescription: UITextView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         DateTimeField.delegate = self
@@ -17,15 +16,15 @@ class AddEventView: UIViewController {
         formatter.dateFormat = "dd-MM-yyyy HH:mm"
         DateTimeField.text = formatter.string(from: DateTimePicker.date)
         //Format to strings
-        
     }
+    
+    
     
     
     @IBAction func SelectedDateTime (_ : AnyObject){
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy HH:mm"
         DateTimeField.text = formatter.string(from: DateTimePicker.date)
-        
     }
     
     
