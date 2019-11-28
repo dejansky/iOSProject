@@ -28,7 +28,7 @@ class DBHelper{
     }
     
     
-    func fetch
+    //func fetch()
     //loopa igenom hela db
     //de dates som matchar cellen ska ge blå bakgrund till cellen
     //matchande gör label clickable
