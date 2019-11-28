@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		271790E9238D5ECB00C96377 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 271790E8238D5ECB00C96377 /* Kingfisher */; };
+		27185C30238FCDB8001FD1B1 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27185C2F238FCDB8001FD1B1 /* DBHelper.swift */; };
+		27185C33238FD806001FD1B1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27185C32238FD806001FD1B1 /* CoreData.framework */; };
+		27185C3D238FDADE001FD1B1 /* BCalendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27185C3B238FDADE001FD1B1 /* BCalendar.xcdatamodeld */; };
+		27185C40238FDB8E001FD1B1 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27185C3E238FDB8E001FD1B1 /* Event+CoreDataClass.swift */; };
+		27185C41238FDB8E001FD1B1 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27185C3F238FDB8E001FD1B1 /* Event+CoreDataProperties.swift */; };
 		27445733237BF097006C8F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27445732237BF097006C8F8C /* AppDelegate.swift */; };
 		27445735237BF097006C8F8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27445734237BF097006C8F8C /* SceneDelegate.swift */; };
 		2744573A237BF097006C8F8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27445738237BF097006C8F8C /* Main.storyboard */; };
@@ -40,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27185C2F238FCDB8001FD1B1 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		27185C32238FD806001FD1B1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		27185C3C238FDADE001FD1B1 /* BCalendar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BCalendar.xcdatamodel; sourceTree = "<group>"; };
+		27185C3E238FDB8E001FD1B1 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		27185C3F238FDB8E001FD1B1 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2744572F237BF097006C8F8C /* BCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27445732237BF097006C8F8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27445734237BF097006C8F8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27185C33238FD806001FD1B1 /* CoreData.framework in Frameworks */,
 				271790E9238D5ECB00C96377 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +104,7 @@
 				27445748237BF097006C8F8C /* BCalendarTests */,
 				27445753237BF097006C8F8C /* BCalendarUITests */,
 				27445730237BF097006C8F8C /* Products */,
+				FD3FC5E1238F56E00053E84F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,15 +122,19 @@
 			isa = PBXGroup;
 			children = (
 				27CAE8282386F759002C08A8 /* CalendarVars.swift */,
-				FDAF1F942386CB6500494706 /* AddEventView.swift */,
 				FDAF1F922386CB3400494706 /* BCalendarMainView.swift */,
 				27445732237BF097006C8F8C /* AppDelegate.swift */,
 				27445734237BF097006C8F8C /* SceneDelegate.swift */,
 				FDAF1F962386CBD900494706 /* PreviewEventView.swift */,
 				83CA9F122387DC7300EC8F7B /* DateCollectionViewCell.swift */,
+				27185C2F238FCDB8001FD1B1 /* DBHelper.swift */,
+				FDAF1F942386CB6500494706 /* AddEventView.swift */,
 				27445738237BF097006C8F8C /* Main.storyboard */,
 				2744573B237BF097006C8F8C /* Assets.xcassets */,
 				2744573D237BF097006C8F8C /* LaunchScreen.storyboard */,
+				27185C3B238FDADE001FD1B1 /* BCalendar.xcdatamodeld */,
+				27185C3E238FDB8E001FD1B1 /* Event+CoreDataClass.swift */,
+				27185C3F238FDB8E001FD1B1 /* Event+CoreDataProperties.swift */,
 				27445740237BF097006C8F8C /* Info.plist */,
 			);
 			path = BCalendar;
@@ -140,6 +156,14 @@
 				27445756237BF097006C8F8C /* Info.plist */,
 			);
 			path = BCalendarUITests;
+			sourceTree = "<group>";
+		};
+		FD3FC5E1238F56E00053E84F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27185C32238FD806001FD1B1 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,10 +303,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27185C41238FDB8E001FD1B1 /* Event+CoreDataProperties.swift in Sources */,
 				27CAE8292386F759002C08A8 /* CalendarVars.swift in Sources */,
 				FDAF1F952386CB6500494706 /* AddEventView.swift in Sources */,
+				27185C40238FDB8E001FD1B1 /* Event+CoreDataClass.swift in Sources */,
 				FDAF1F932386CB3400494706 /* BCalendarMainView.swift in Sources */,
 				83CA9F132387DC7300EC8F7B /* DateCollectionViewCell.swift in Sources */,
+				27185C3D238FDADE001FD1B1 /* BCalendar.xcdatamodeld in Sources */,
+				27185C30238FCDB8001FD1B1 /* DBHelper.swift in Sources */,
 				FDAF1F972386CBD900494706 /* PreviewEventView.swift in Sources */,
 				27445733237BF097006C8F8C /* AppDelegate.swift in Sources */,
 				27445735237BF097006C8F8C /* SceneDelegate.swift in Sources */,
@@ -627,6 +655,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		27185C3B238FDADE001FD1B1 /* BCalendar.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				27185C3C238FDADE001FD1B1 /* BCalendar.xcdatamodel */,
+			);
+			currentVersion = 27185C3C238FDADE001FD1B1 /* BCalendar.xcdatamodel */;
+			path = BCalendar.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 27445727237BF097006C8F8C /* Project object */;
 }
