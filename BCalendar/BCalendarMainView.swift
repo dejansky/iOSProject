@@ -18,37 +18,31 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     var PreviousNumberOfEmptyBox = 0
     var Direction = 0
     var PositionIndex = 0
-    
-    var LeapYearCounter = 2
-    
     var DayCounter = 0
     
+    var LeapYearList = [2012,2016,2020,2024,2028,2032]
     
-
-       
+    
     
     @IBOutlet weak var CityNameLabel: UILabel!
     @IBOutlet weak var ConditionLabel: UILabel!
     @IBOutlet weak var DegreesLabel: UILabel!
     
     
-// https://api.darksky.net/forecast/d0e7d944730e01b0c906f2d0c8f34b2a/57.78145,14.15618
-//     91b573073a4edc370f7a687f0f5c60fe
-    
-   
     
     override func viewDidLoad() {
         
         // MARK: - DateView
         super.viewDidLoad()
-        currentMonth = months[currMonth] //Fetch and store data from Date.currMonth
-        currentMonthLabel.text = "\(currentMonth) \(currYear)" //Display the month label with combination of current month and year
+        currentMonth = months[currMonth]
+        currentMonthLabel.text = "\(currentMonth) \(currYear)"
+        
         if currWeekDay == 0 {
             currWeekDay = 7
         }
         GetStartDayDatePosition()
         
-        // MARK: - WeatherView
+        // MARK: - WeatherView API
         guard let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?id=2702977&APPID=91b573073a4edc370f7a687f0f5c60fe") else {return}
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data, error == nil {
@@ -68,24 +62,36 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     }
     
         
-    // MARK: - Weather
+    // MARK: - Weather Display
     func setWeather(weather: String?, description: String?, temp: Int ) {
         ConditionLabel.text = description ?? "..."
         DegreesLabel.text = "\(KelvinToCelcius(temp: temp)) °C"
         CityNameLabel.text = "Jönköping"
     }
     
+    // MARK: - Klevin to Celsius
     func KelvinToCelcius(temp: Int) -> Int{
         let temp = temp - 273
         return temp
         
+    }
+    
+    
+    func isLeapYear(thisYear: Int) -> Bool {
+        let thisYearHere = thisYear
+        for i in LeapYearList {
+            if thisYearHere == i{
+                return true
+            }
+        }
+        return false
     }
     // MARK: - Date
         
         
     
 
-   
+   // Mark: - Button NEXT
     @IBAction func nextMonth(_ sender: Any) {
         
         switch currentMonth {
@@ -103,29 +109,27 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         default:
             Direction = 1
             
-            
-            GetStartDayDatePosition()
-            currMonth += 1
-            
-            if LeapYearCounter < 5 {
-                LeapYearCounter += 1
-            }
-            if LeapYearCounter == 4{
+            if isLeapYear(thisYear: currYear) == true{
                 monthEndDays[1] = 29
             }
-            if LeapYearCounter == 5{
-                LeapYearCounter = 1
+            else{
                 monthEndDays[1] = 28
             }
             
+            GetStartDayDatePosition()
+            currMonth += 1
+        
             currentMonth = months[currMonth]
             currentMonthLabel.text = "\(currentMonth) \(currYear)"
+            
+            
+            
             calendarDays.reloadData()
             
         }
     }
     
-    
+    // MARK: - Button Previous
     @IBAction func prevMonth(_ sender: Any) {
         
         switch currentMonth {
@@ -144,26 +148,28 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             currMonth -= 1
             Direction = -1
             
-            if LeapYearCounter > 0 {
-                LeapYearCounter -= 1
-            }
-            if LeapYearCounter == 0{
+            if isLeapYear(thisYear: currYear) == true{
                 monthEndDays[1] = 29
-                LeapYearCounter = 4
             }
-            else {
+            else{
                 monthEndDays[1] = 28
             }
             
             GetStartDayDatePosition()
-            
+
             currentMonth = months[currMonth]
             currentMonthLabel.text = "\(currentMonth) \(currYear)"
+            
+            
+            
             calendarDays.reloadData()
+            
+            
         }
         
     }
     
+    // MARK: - GetStartDatePosition()
     func GetStartDayDatePosition() {
         switch Direction {
         case 0:
@@ -194,7 +200,9 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         }
     }
     
-
+    
+    // MARK: - collectionView
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch Direction {
         case 0:
@@ -210,6 +218,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         
     }
     
+    // MARK: - collectionView Cells
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Calendar", for: indexPath) as! DateCollectionViewCell
         
