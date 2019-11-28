@@ -8,10 +8,29 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 class DBHelper{
     static var shareInstance = DBHelper()
-    func saveEvent (object:[String:String]){
-        let event =
+    let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+    
+    func save(object:[String:String]){
+        let thisEvent =
+            NSEntityDescription.insertNewObject(forEntityName: "Event", into: context!) as! Event
+        thisEvent.eventdatetime = object["eventdatetime"]
+        thisEvent.eventdescription = object["eventdescription"]
+        
+        do{
+            try context?.save()
+        }catch{
+            print("No data to save")
+        }
     }
+    
+    
+    func fetch
+    //loopa igenom hela db
+    //de dates som matchar cellen ska ge blå bakgrund till cellen
+    //matchande gör label clickable
+    
 }

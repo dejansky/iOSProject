@@ -22,8 +22,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     var LeapYearCounter = 2
     
     var DayCounter = 0
-    
-    
 
        
     
