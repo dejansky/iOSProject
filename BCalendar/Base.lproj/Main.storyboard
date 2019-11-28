@@ -337,6 +337,7 @@
                                             <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="bttnCreateEvent:" destination="pwK-Wd-PR1" eventType="touchUpInside" id="R2H-Nc-BEA"/>
                                             <segue destination="3dz-DJ-XMa" kind="show" id="SWu-6Q-nvY"/>
                                         </connections>
                                     </button>

@@ -20,6 +20,10 @@ class AddEventView: UIViewController {
     
     
     
+    @IBAction func bttnCreateEvent(_ sender: Any) {
+        let dict = ["eventdatetime": DateTimeField.text ,"eventdescription": eventDescription.text]
+        DBHelper.shareInstance.saveEvent(object : dict as! [String:String])
+    }
     
     @IBAction func SelectedDateTime (_ : AnyObject){
         let formatter = DateFormatter()

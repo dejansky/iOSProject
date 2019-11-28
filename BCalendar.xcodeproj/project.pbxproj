@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		271790E9238D5ECB00C96377 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 271790E8238D5ECB00C96377 /* Kingfisher */; };
+		27185C30238FCDB8001FD1B1 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27185C2F238FCDB8001FD1B1 /* DBHelper.swift */; };
+		27185C31238FD01D001FD1B1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3FC5E2238F56E00053E84F /* CoreData.framework */; };
 		27445733237BF097006C8F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27445732237BF097006C8F8C /* AppDelegate.swift */; };
 		27445735237BF097006C8F8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27445734237BF097006C8F8C /* SceneDelegate.swift */; };
 		2744573A237BF097006C8F8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27445738237BF097006C8F8C /* Main.storyboard */; };
@@ -21,7 +23,6 @@
 		FD3FC599238F52A20053E84F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD3FC597238F52A20053E84F /* DataModel.xcdatamodeld */; };
 		FD3FC5DF238F56950053E84F /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FC5DD238F56950053E84F /* Event+CoreDataClass.swift */; };
 		FD3FC5E0238F56950053E84F /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FC5DE238F56950053E84F /* Event+CoreDataProperties.swift */; };
-		FD3FC5E3238F56E00053E84F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3FC5E2238F56E00053E84F /* CoreData.framework */; };
 		FDAF1F932386CB3400494706 /* BCalendarMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF1F922386CB3400494706 /* BCalendarMainView.swift */; };
 		FDAF1F952386CB6500494706 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF1F942386CB6500494706 /* AddEventView.swift */; };
 		FDAF1F972386CBD900494706 /* PreviewEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF1F962386CBD900494706 /* PreviewEventView.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27185C2F238FCDB8001FD1B1 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		2744572F237BF097006C8F8C /* BCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27445732237BF097006C8F8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27445734237BF097006C8F8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD3FC5E3238F56E00053E84F /* CoreData.framework in Frameworks */,
+				27185C31238FD01D001FD1B1 /* CoreData.framework in Frameworks */,
 				271790E9238D5ECB00C96377 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,12 +124,13 @@
 			isa = PBXGroup;
 			children = (
 				27CAE8282386F759002C08A8 /* CalendarVars.swift */,
-				FDAF1F942386CB6500494706 /* AddEventView.swift */,
 				FDAF1F922386CB3400494706 /* BCalendarMainView.swift */,
 				27445732237BF097006C8F8C /* AppDelegate.swift */,
 				27445734237BF097006C8F8C /* SceneDelegate.swift */,
 				FDAF1F962386CBD900494706 /* PreviewEventView.swift */,
 				83CA9F122387DC7300EC8F7B /* DateCollectionViewCell.swift */,
+				27185C2F238FCDB8001FD1B1 /* DBHelper.swift */,
+				FDAF1F942386CB6500494706 /* AddEventView.swift */,
 				FD3FC5DD238F56950053E84F /* Event+CoreDataClass.swift */,
 				FD3FC5DE238F56950053E84F /* Event+CoreDataProperties.swift */,
 				27445738237BF097006C8F8C /* Main.storyboard */,
@@ -310,6 +313,7 @@
 				FDAF1F932386CB3400494706 /* BCalendarMainView.swift in Sources */,
 				FD3FC596238EC3940053E84F /* EventClass.swift in Sources */,
 				83CA9F132387DC7300EC8F7B /* DateCollectionViewCell.swift in Sources */,
+				27185C30238FCDB8001FD1B1 /* DBHelper.swift in Sources */,
 				FDAF1F972386CBD900494706 /* PreviewEventView.swift in Sources */,
 				FD3FC599238F52A20053E84F /* DataModel.xcdatamodeld in Sources */,
 				27445733237BF097006C8F8C /* AppDelegate.swift in Sources */,
