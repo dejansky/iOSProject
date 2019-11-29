@@ -21,17 +21,16 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     var DayCounter = 0
     
     var LeapYearList = [2012,2016,2020,2024,2028,2032]
-    
-    
-    
+        
     @IBOutlet weak var CityNameLabel: UILabel!
     @IBOutlet weak var ConditionLabel: UILabel!
     @IBOutlet weak var DegreesLabel: UILabel!
     
     
-    
     override func viewDidLoad() {
         
+        
+
         // MARK: - DateView
         super.viewDidLoad()
         currentMonth = months[currMonth]
@@ -75,8 +74,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         return temp
         
     }
-    
-    
+        
     func isLeapYear(thisYear: Int) -> Bool {
         let thisYearHere = thisYear
         for i in LeapYearList {
@@ -87,11 +85,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         return false
     }
     // MARK: - Date
-        
-        
-    
 
-   // Mark: - Button NEXT
     @IBAction func nextMonth(_ sender: Any) {
         
         switch currentMonth {
@@ -222,9 +216,30 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Calendar", for: indexPath) as! DateCollectionViewCell
         
-        cell.backgroundColor = UIColor.clear
+      
         
-        cell.DateLabel.textColor = UIColor.black
+        
+        
+        //MARK: - change color for days with events
+        
+        let events = DBHelper().getData()
+        
+        for _ in events{
+        
+            if cell.DateLabel.text == AddEventView().dataSeperator().eventday! as String{
+            cell.backgroundColor = UIColor.systemPink
+            }
+        else {
+            cell.backgroundColor = UIColor.clear
+                  
+                  cell.DateLabel.textColor = UIColor.black
+            }
+        }
+
+        
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        
         
         if cell.isHidden {
             cell.isHidden = false

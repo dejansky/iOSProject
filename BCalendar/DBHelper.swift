@@ -31,8 +31,15 @@ class DBHelper{
     }
     
     
-    func getData(){
-        
+    func getData() -> [Event]{
+        var event = [Event]()
+        let fetchRequest = NSFetchRequest <NSManagedObject> (entityName: "Event")
+        do{
+            event = try context?.fetch(fetchRequest) as! [Event]
+        }catch {
+            print ("Data cannot be fetched ")
+        }
+        return event
     }
     
 

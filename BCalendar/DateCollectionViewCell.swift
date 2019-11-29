@@ -12,4 +12,6 @@ class DateCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var DateLabel: UILabel!
     
+    
+
 }
