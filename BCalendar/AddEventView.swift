@@ -10,8 +10,7 @@ class AddEventView: UIViewController {
     @IBOutlet weak var bttnCreateEvent: UIButton!
     
     //MARK: -some func to return
-    
-    func dataSeperator() -> (eventday:String?, eventmonth:String?, eventyear:String?){
+    func dataSeperator() -> (eventday:String, eventmonth:String, eventyear:String){
         
         let formatter = DateFormatter()
         formatter.dateFormat = "dd"
@@ -38,7 +37,7 @@ class AddEventView: UIViewController {
     
     @IBAction func bttnCreateEvent(_ sender: Any) {
         
-        let dict = ["eventday":dataSeperator().eventday, "eventmonth":dataSeperator().eventmonth as Any, "eventyear":dataSeperator().eventyear ,"eventdescription": eventDescription.text as Any] as [String? : Any]
+        let dict = ["eventday":dataSeperator().eventday, "eventmonth":dataSeperator().eventmonth as Any, "eventyear":dataSeperator().eventyear ,"eventdescription": eventDescription.text as Any] as [String : Any]
         
         DBHelper.shareInstance.saveData(object : dict as! [String:String])
     

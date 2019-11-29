@@ -3,11 +3,11 @@ import Kingfisher
 
 
 class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
- 
- 
+    
+    
     @IBOutlet weak var calendarDays: UICollectionView!
     @IBOutlet weak var currentMonthLabel: UILabel!
-
+    
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     let weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
     var monthEndDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -21,7 +21,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     var DayCounter = 0
     
     var LeapYearList = [2012,2016,2020,2024,2028,2032]
-        
+    
     @IBOutlet weak var CityNameLabel: UILabel!
     @IBOutlet weak var ConditionLabel: UILabel!
     @IBOutlet weak var DegreesLabel: UILabel!
@@ -29,8 +29,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     
     override func viewDidLoad() {
         
-        
-
         // MARK: - DateView
         super.viewDidLoad()
         currentMonth = months[currMonth]
@@ -60,7 +58,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         task.resume()
     }
     
-        
+    
     // MARK: - Weather Display
     func setWeather(weather: String?, description: String?, temp: Int ) {
         ConditionLabel.text = description ?? "..."
@@ -74,7 +72,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         return temp
         
     }
-        
+    
     func isLeapYear(thisYear: Int) -> Bool {
         let thisYearHere = thisYear
         for i in LeapYearList {
@@ -85,7 +83,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         return false
     }
     // MARK: - Date
-
+    
     @IBAction func nextMonth(_ sender: Any) {
         
         switch currentMonth {
@@ -112,7 +110,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             
             GetStartDayDatePosition()
             currMonth += 1
-        
+            
             currentMonth = months[currMonth]
             currentMonthLabel.text = "\(currentMonth) \(currYear)"
             
@@ -123,6 +121,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         }
     }
     
+    
     // MARK: - Button Previous
     @IBAction func prevMonth(_ sender: Any) {
         
@@ -131,7 +130,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             currMonth = 11
             currYear -= 1
             Direction = -1
-                   
+            
             GetStartDayDatePosition()
             
             currentMonth = months[currMonth]
@@ -150,7 +149,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             }
             
             GetStartDayDatePosition()
-
+            
             currentMonth = months[currMonth]
             currentMonthLabel.text = "\(currentMonth) \(currYear)"
             
@@ -216,29 +215,20 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Calendar", for: indexPath) as! DateCollectionViewCell
         
-      
+        cell.backgroundColor = UIColor.clear
+        cell.DateLabel.textColor = UIColor.black
         
         
         
-        //MARK: - change color for days with events
-        
-        let events = DBHelper().getData()
-        
-        for _ in events{
-        
-            if cell.DateLabel.text == AddEventView().dataSeperator().eventday! as String{
-            cell.backgroundColor = UIColor.systemPink
+        let events = DBHelper.shareInstance.getData()
+        for event in events{
+            if event.eventday == cell.DateLabel.text &&
+            event.eventmonth == currentMonthLabel.text{
+                cell.backgroundColor = UIColor.green
+                //Bug: vilket index ska användas för att nå rätt dag?
             }
-        else {
-            cell.backgroundColor = UIColor.clear
-                  
-                  cell.DateLabel.textColor = UIColor.black
+            
             }
-        }
-
-        
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
         
         
         if cell.isHidden {
@@ -277,7 +267,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         
         return cell
     }
-
-
+    
+    
     
 }
