@@ -2,7 +2,7 @@
 //  Event+CoreDataProperties.swift
 //  BCalendar
 //
-//  Created by Vida Rashidi on 2019-11-28.
+//  Created by Vida Rashidi on 2019-11-29.
 //  Copyright © 2019 Project. All rights reserved.
 //
 //
@@ -17,7 +17,9 @@ extension Event {
         return NSFetchRequest<Event>(entityName: "Event")
     }
 
-    @NSManaged public var eventdatetime: String?
-    @NSManaged public var eventdescription: String?
+    @NSManaged public var eventday: String?
+    @NSManaged public var eventdescripion: String?
+    @NSManaged public var eventmonth: String?
+    @NSManaged public var eventyear: String?
 
 }

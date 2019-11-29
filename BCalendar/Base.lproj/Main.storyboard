@@ -282,7 +282,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZd-vZ-zPH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="404"/>
                                 <subviews>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VEW-TZ-T1X">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="VEW-TZ-T1X">
                                         <rect key="frame" x="0.0" y="10.000000000000014" width="414" height="242.33333333333337"/>
                                         <connections>
                                             <action selector="SelectedDateTime:" destination="pwK-Wd-PR1" eventType="valueChanged" id="nCp-zD-SqP"/>
@@ -337,6 +337,7 @@
                                             <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="bttnCreateEvent:" destination="pwK-Wd-PR1" eventType="touchUpInside" id="pSI-N2-bpD"/>
                                             <segue destination="3dz-DJ-XMa" kind="show" id="SWu-6Q-nvY"/>
                                         </connections>
                                     </button>
@@ -502,7 +503,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hpO-vp-8bj"/>
         <segue reference="SWu-6Q-nvY"/>
     </inferredMetricsTieBreakers>
 </document>

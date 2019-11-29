@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="18G1012" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Event" representedClassName="Event" syncable="YES">
-        <attribute name="eventdate" optional="YES" attributeType="String"/>
+        <attribute name="eventday" optional="YES" attributeType="String"/>
         <attribute name="eventdescripion" optional="YES" attributeType="String"/>
+        <attribute name="eventmonth" optional="YES" attributeType="String"/>
+        <attribute name="eventyear" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Event" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Event" positionX="-63" positionY="-18" width="128" height="103"/>
     </elements>
 </model>

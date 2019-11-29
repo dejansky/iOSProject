@@ -17,8 +17,11 @@ class DBHelper{
     func save(object:[String:String]){
         let thisEvent =
             NSEntityDescription.insertNewObject(forEntityName: "Event", into: context!) as! Event
-        thisEvent.eventdatetime = object["eventdatetime"]
-        thisEvent.eventdescription = object["eventdescription"]
+        
+        thisEvent.eventday = object["eventday"]
+        thisEvent.eventyear = object["eventyear"]
+        thisEvent.eventmonth = object["eventmonth"]
+        thisEvent.eventdescripion = object["eventdescription"]
         
         do{
             try context?.save()
