@@ -14,7 +14,7 @@ class DBHelper{
     static var shareInstance = DBHelper()
     let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
-    func save(object:[String:String]){
+    func saveData(object:[String:String]){
         let thisEvent =
             NSEntityDescription.insertNewObject(forEntityName: "Event", into: context!) as! Event
         
@@ -31,9 +31,10 @@ class DBHelper{
     }
     
     
-    //func fetch()
-    //loopa igenom hela db
-    //de dates som matchar cellen ska ge blå bakgrund till cellen
-    //matchande gör label clickable
+    func getData(){
+        
+    }
+    
+
     
 }
