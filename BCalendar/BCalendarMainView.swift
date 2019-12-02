@@ -56,8 +56,21 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             }
         }
         task.resume()
+        
     }
     
+    
+//
+//    @IBAction func bttnEdit(_ sender: Any) {
+//
+//        let events = DBHelper.shareInstance.getData()
+//        for event in events {
+//            print(event.eventday!)
+//            print(event.eventyear!)
+//            print(event.eventmonth!)
+//        }
+//    }
+
     
     // MARK: - Weather Display
     func setWeather(weather: String?, description: String?, temp: Int ) {
@@ -66,12 +79,13 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         CityNameLabel.text = "Jönköping"
     }
     
-    // MARK: - Klevin to Celsius
+    
+    // MARK: - Kelvin to Celsius
     func KelvinToCelcius(temp: Int) -> Int{
         let temp = temp - 273
         return temp
-        
     }
+    
     
     func isLeapYear(thisYear: Int) -> Bool {
         let thisYearHere = thisYear
@@ -82,10 +96,9 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         }
         return false
     }
-    // MARK: - Date
     
+    // MARK: - Date
     @IBAction func nextMonth(_ sender: Any) {
-        
         switch currentMonth {
         case "Dec": // In case the currentMont is December applythe following rules
             currMonth = 0 // Set the current month to 0
@@ -195,7 +208,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     
     
     // MARK: - collectionView
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch Direction {
         case 0:
@@ -208,7 +220,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         default:
             fatalError()
         }
-        
     }
     
     // MARK: - collectionView Cells
@@ -217,18 +228,18 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         
         cell.backgroundColor = UIColor.clear
         cell.DateLabel.textColor = UIColor.black
+    
         
         
-        
+        //MARK: - func new color
         let events = DBHelper.shareInstance.getData()
         for event in events{
-            if event.eventday == cell.DateLabel.text &&
-            event.eventmonth == currentMonthLabel.text{
+
+            if event.eventday! == cell.DateLabel.text!{
                 cell.backgroundColor = UIColor.green
-                //Bug: vilket index ska användas för att nå rätt dag?
             }
-            
-            }
+        }
+        /////////////////////////////////////////////////////////////////////////////////////////
         
         
         if cell.isHidden {
@@ -263,11 +274,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox {
             cell.backgroundColor = UIColor.red
         }
-        
-        
         return cell
     }
-    
-    
-    
 }

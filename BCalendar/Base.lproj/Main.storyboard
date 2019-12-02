@@ -13,15 +13,15 @@
             <objects>
                 <viewController id="3dz-DJ-XMa" userLabel="BCalendarMainView" customClass="BCalendarMainView" customModule="BCalendar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0K5-WT-Lyr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qun-GO-0F4">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDP-D0-R49">
-                                <rect key="frame" x="311.33333333333331" y="15" width="82.666666666666686" height="30"/>
+                                <rect key="frame" x="311.33333333333331" y="103" width="82.666666666666686" height="30"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="+ Add">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRf-oi-IGW">
-                                <rect key="frame" x="0.0" y="55" width="414" height="404"/>
+                                <rect key="frame" x="0.0" y="143" width="414" height="387"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-we-NZC">
                                         <rect key="frame" x="351.66666666666669" y="0.0" width="62.333333333333314" height="30"/>
@@ -91,7 +91,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Su" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kID-pL-Jli">
-                                        <rect key="frame" x="355" y="29.666666666666671" width="59" height="21"/>
+                                        <rect key="frame" x="355" y="29.666666666666657" width="59" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -103,7 +103,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NRQ-jM-ZKy">
-                                        <rect key="frame" x="0.0" y="51" width="414" height="353"/>
+                                        <rect key="frame" x="0.0" y="51" width="414" height="336"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="5" id="mj6-SL-tlA">
                                             <size key="itemSize" width="45" height="45"/>
@@ -112,7 +112,7 @@
                                             <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <view key="backgroundView" contentMode="scaleToFill" id="IAx-Ww-tbE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="353"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="336"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </view>
                                         <cells>
@@ -187,10 +187,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CD5-9h-fZF">
-                                <rect key="frame" x="0.0" y="459" width="414" height="349"/>
+                                <rect key="frame" x="0.0" y="530" width="414" height="332"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDZ-1n-AyY">
-                                        <rect key="frame" x="124.33333333333333" y="258.33333333333337" width="165.33333333333337" height="41.666666666666686"/>
+                                        <rect key="frame" x="124.33333333333333" y="245.66666666666663" width="165.33333333333337" height="40"/>
                                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Edit event">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -326,7 +326,6 @@
                                         </state>
                                         <connections>
                                             <action selector="bttnCreateEvent:" destination="pwK-Wd-PR1" eventType="touchUpInside" id="pSI-N2-bpD"/>
-                                            <segue destination="3dz-DJ-XMa" kind="show" id="SWu-6Q-nvY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -491,8 +490,4 @@
             <point key="canvasLocation" x="2309" y="449"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="InM-YW-Cgi"/>
-        <segue reference="SWu-6Q-nvY"/>
-    </inferredMetricsTieBreakers>
 </document>

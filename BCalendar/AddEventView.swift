@@ -9,7 +9,7 @@ class AddEventView: UIViewController {
     
     @IBOutlet weak var bttnCreateEvent: UIButton!
     
-    //MARK: -some func to return
+    //MARK: - Seperate the date
     func dataSeperator() -> (eventday:String, eventmonth:String, eventyear:String){
         
         let formatter = DateFormatter()
@@ -33,14 +33,12 @@ class AddEventView: UIViewController {
         //Format to strings
     }
     
-    
-    
     @IBAction func bttnCreateEvent(_ sender: Any) {
         
         let dict = ["eventday":dataSeperator().eventday, "eventmonth":dataSeperator().eventmonth as Any, "eventyear":dataSeperator().eventyear ,"eventdescription": eventDescription.text as Any] as [String : Any]
         
         DBHelper.shareInstance.saveData(object : dict as! [String:String])
-    
+        self.dismiss(animated: true)
     }
     
     @IBAction func SelectedDateTime (_ : AnyObject){
@@ -50,8 +48,8 @@ class AddEventView: UIViewController {
     }
     
     
-    
     //MARK: - Dismissing keyboards
+    
     //Dismisses the keyboard when editing has finished
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)

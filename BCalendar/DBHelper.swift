@@ -1,10 +1,3 @@
-//
-//  DBHelper.swift
-//  BCalendar
-//
-//  Created by Vida Rashidi on 2019-11-28.
-//  Copyright © 2019 Project. All rights reserved.
-//
 
 import Foundation
 import CoreData
@@ -30,7 +23,6 @@ class DBHelper{
         }
     }
     
-    
     func getData() -> [Event]{
         var event = [Event]()
         let fetchRequest = NSFetchRequest <NSManagedObject> (entityName: "Event")
@@ -41,7 +33,5 @@ class DBHelper{
         }
         return event
     }
-    
-
     
 }
