@@ -8,7 +8,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     @IBOutlet weak var calendarDays: UICollectionView!
     @IBOutlet weak var currentMonthLabel: UILabel!
     
-    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    let months = ["January", "February", "Mars", "April", "May", "Jun", "July", "August", "September", "October", "November", "December"]
     let weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
     var monthEndDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     var currentMonth = String()
@@ -100,7 +100,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     // MARK: - Date
     @IBAction func nextMonth(_ sender: Any) {
         switch currentMonth {
-        case "Dec": // In case the currentMont is December applythe following rules
+        case "December": // In case the currentMont is December applythe following rules
             currMonth = 0 // Set the current month to 0
             currYear += 1 // Add 1 to the current year property in Date.currYear
             Direction = 1 // Defining the direction of wich the GetStartDayDatePositio should follow
@@ -139,7 +139,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     @IBAction func prevMonth(_ sender: Any) {
         
         switch currentMonth {
-        case "Jan":
+        case "January":
             currMonth = 11
             currYear -= 1
             Direction = -1
@@ -228,18 +228,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         
         cell.backgroundColor = UIColor.clear
         cell.DateLabel.textColor = UIColor.black
-    
-        
-        
-        //MARK: - func new color
-        let events = DBHelper.shareInstance.getData()
-        for event in events{
-
-            if event.eventday! == cell.DateLabel.text!{
-                cell.backgroundColor = UIColor.green
-            }
-        }
-        /////////////////////////////////////////////////////////////////////////////////////////
         
         
         if cell.isHidden {
@@ -274,6 +262,24 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox {
             cell.backgroundColor = UIColor.red
         }
+        
+        
+        //MARK: - func new color
+        let events = DBHelper.shareInstance.getData()
+        
+        
+        for event in events{
+
+            if  currYear == Int(event.eventyear!) && indexPath.row + 1 == Int(event.eventday!) && currMonth + 1 == Int(event.eventmonth!) {
+                cell.backgroundColor = UIColor.green
+                
+                print(months[11])
+                print(event.eventmonth!)
+                print(currMonth)
+            }
+        }
+        /////////////////////////////////////////////////////////////////////////////////////////
+        
         return cell
     }
 }
