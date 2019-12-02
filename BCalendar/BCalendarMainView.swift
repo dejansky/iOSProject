@@ -22,6 +22,8 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     
     var LeapYearList = [2012,2016,2020,2024,2028,2032]
     
+    
+    
     @IBOutlet weak var CityNameLabel: UILabel!
     @IBOutlet weak var ConditionLabel: UILabel!
     @IBOutlet weak var DegreesLabel: UILabel!
@@ -33,6 +35,8 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         super.viewDidLoad()
         currentMonth = months[currMonth]
         currentMonthLabel.text = "\(currentMonth) \(currYear)"
+        
+        
         
         if currWeekDay == 0 {
             currWeekDay = 7
@@ -259,26 +263,24 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         }
         
         
-        if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox {
-            cell.backgroundColor = UIColor.red
-        }
-        
+       
         
         //MARK: - func new color
         let events = DBHelper.shareInstance.getData()
         
-        
-        for event in events{
-
-            if  currYear == Int(event.eventyear!) && indexPath.row + 1 == Int(event.eventday!) && currMonth + 1 == Int(event.eventmonth!) {
-                cell.backgroundColor = UIColor.green
+            for event in events{
                 
-                print(months[11])
-                print(event.eventmonth!)
-                print(currMonth)
+                if  currYear == Int(event.eventyear!) && Int(cell.DateLabel.text!) == Int(event.eventday!)! && currMonth + 1 == Int(event.eventmonth!) {
+                    cell.backgroundColor = UIColor.green
+                    
+                }
+
             }
-        }
         /////////////////////////////////////////////////////////////////////////////////////////
+        if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox {
+                   cell.backgroundColor = UIColor.red
+               }
+               
         
         return cell
     }
