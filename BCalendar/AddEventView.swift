@@ -39,6 +39,11 @@ class AddEventView: UIViewController {
         
         DBHelper.shareInstance.saveData(object : dict as! [String:String])
         self.dismiss(animated: true)
+        
+        events = DBHelper.shareInstance.getData()
+        
+        
+        
     }
     
     @IBAction func SelectedDateTime (_ : AnyObject){

@@ -24,6 +24,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     
     
     
+    
     @IBOutlet weak var CityNameLabel: UILabel!
     @IBOutlet weak var ConditionLabel: UILabel!
     @IBOutlet weak var DegreesLabel: UILabel!
@@ -35,8 +36,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         super.viewDidLoad()
         currentMonth = months[currMonth]
         currentMonthLabel.text = "\(currentMonth) \(currYear)"
-        
-        
         
         if currWeekDay == 0 {
             currWeekDay = 7
@@ -61,20 +60,9 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         }
         task.resume()
         
+        print("View did load !!!!")
+        
     }
-    
-    
-//
-//    @IBAction func bttnEdit(_ sender: Any) {
-//
-//        let events = DBHelper.shareInstance.getData()
-//        for event in events {
-//            print(event.eventday!)
-//            print(event.eventyear!)
-//            print(event.eventmonth!)
-//        }
-//    }
-
     
     // MARK: - Weather Display
     func setWeather(weather: String?, description: String?, temp: Int ) {
@@ -131,8 +119,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             currentMonth = months[currMonth]
             currentMonthLabel.text = "\(currentMonth) \(currYear)"
             
-            
-            
             calendarDays.reloadData()
             
         }
@@ -169,12 +155,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             
             currentMonth = months[currMonth]
             currentMonthLabel.text = "\(currentMonth) \(currYear)"
-            
-            
-            
             calendarDays.reloadData()
-            
-            
         }
         
     }
@@ -224,6 +205,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         default:
             fatalError()
         }
+        
     }
     
     // MARK: - collectionView Cells
@@ -263,24 +245,19 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         }
         
         
-       
-        
         //MARK: - func new color
-        let events = DBHelper.shareInstance.getData()
         
-            for event in events{
-                
-                if  currYear == Int(event.eventyear!) && Int(cell.DateLabel.text!) == Int(event.eventday!)! && currMonth + 1 == Int(event.eventmonth!) {
-                    cell.backgroundColor = UIColor.green
-                    
-                }
-
+        for event in events{
+            if  currYear == Int(event.eventyear!) && Int(cell.DateLabel.text!) == Int(event.eventday!)! && currMonth + 1 == Int(event.eventmonth!) {
+                cell.backgroundColor = UIColor.green
             }
+        }
+        
         /////////////////////////////////////////////////////////////////////////////////////////
         if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox {
-                   cell.backgroundColor = UIColor.red
-               }
-               
+            cell.backgroundColor = UIColor.red
+        }
+        
         
         return cell
     }
