@@ -4,6 +4,7 @@ import Kingfisher
 
 class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    static var currentInstance : BCalendarMainView!
     
     @IBOutlet weak var calendarDays: UICollectionView!
     @IBOutlet weak var currentMonthLabel: UILabel!
@@ -34,6 +35,9 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         
         // MARK: - DateView
         super.viewDidLoad()
+        
+        BCalendarMainView.currentInstance = self //This->
+        
         currentMonth = months[currMonth]
         currentMonthLabel.text = "\(currentMonth) \(currYear)"
         
@@ -63,7 +67,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         print("View did load !!!!")
         
     }
-    
+
     // MARK: - Weather Display
     func setWeather(weather: String?, description: String?, temp: Int ) {
         ConditionLabel.text = description ?? "..."

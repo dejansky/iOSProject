@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRf-oi-IGW">
-                                <rect key="frame" x="0.0" y="143" width="414" height="387"/>
+                                <rect key="frame" x="0.0" y="142.99999999999997" width="414" height="406.33333333333326"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-we-NZC">
                                         <rect key="frame" x="351.66666666666669" y="0.0" width="62.333333333333314" height="30"/>
@@ -103,7 +103,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NRQ-jM-ZKy">
-                                        <rect key="frame" x="0.0" y="51" width="414" height="336"/>
+                                        <rect key="frame" x="0.0" y="51" width="414" height="355.33333333333331"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="5" id="mj6-SL-tlA">
                                             <size key="itemSize" width="45" height="45"/>
@@ -112,7 +112,7 @@
                                             <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <view key="backgroundView" contentMode="scaleToFill" id="IAx-Ww-tbE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="336"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="355.33333333333331"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </view>
                                         <cells>
@@ -186,10 +186,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CD5-9h-fZF">
-                                <rect key="frame" x="0.0" y="530" width="414" height="332"/>
+                                <rect key="frame" x="0.0" y="549.33333333333337" width="414" height="312.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDZ-1n-AyY">
-                                        <rect key="frame" x="124.33333333333333" y="245.66666666666663" width="165.33333333333337" height="40"/>
+                                        <rect key="frame" x="124.33333333333333" y="231.33333333333326" width="165.33333333333337" height="37.666666666666686"/>
                                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Edit event">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -248,7 +248,7 @@
                             <constraint firstItem="xW2-oR-Uuu" firstAttribute="bottom" secondItem="Qun-GO-0F4" secondAttribute="bottom" id="WwH-pH-U8S"/>
                             <constraint firstItem="Qun-GO-0F4" firstAttribute="leading" secondItem="xW2-oR-Uuu" secondAttribute="leading" id="Zb4-mY-QyE"/>
                             <constraint firstItem="oRf-oi-IGW" firstAttribute="leading" secondItem="xW2-oR-Uuu" secondAttribute="leading" id="aOR-DY-OsA"/>
-                            <constraint firstItem="oRf-oi-IGW" firstAttribute="height" secondItem="Qun-GO-0F4" secondAttribute="height" multiplier="50%" id="brG-Zw-Amj"/>
+                            <constraint firstItem="oRf-oi-IGW" firstAttribute="height" secondItem="Qun-GO-0F4" secondAttribute="height" multiplier="52.5%" id="brG-Zw-Amj"/>
                             <constraint firstItem="IDP-D0-R49" firstAttribute="width" secondItem="Qun-GO-0F4" secondAttribute="width" multiplier="20%" id="lam-gC-Kfv"/>
                             <constraint firstItem="xW2-oR-Uuu" firstAttribute="trailing" secondItem="CD5-9h-fZF" secondAttribute="trailing" id="wxM-EA-zPy"/>
                             <constraint firstItem="xW2-oR-Uuu" firstAttribute="trailing" secondItem="oRf-oi-IGW" secondAttribute="trailing" id="zyJ-dN-O4f"/>

@@ -1,7 +1,7 @@
 
 import UIKit
 
-class AddEventView: UIViewController {
+class AddEventView: UIViewController{
     
     @IBOutlet weak var DateTimePicker: UIDatePicker!
     @IBOutlet weak var DateTimeField: UITextField!
@@ -33,6 +33,7 @@ class AddEventView: UIViewController {
         //Format to strings
     }
     
+
     @IBAction func bttnCreateEvent(_ sender: Any) {
         
         let dict = ["eventday":dataSeperator().eventday, "eventmonth":dataSeperator().eventmonth as Any, "eventyear":dataSeperator().eventyear ,"eventdescription": eventDescription.text as Any] as [String : Any]
@@ -42,8 +43,7 @@ class AddEventView: UIViewController {
         
         events = DBHelper.shareInstance.getData()
         
-        
-        
+        BCalendarMainView.currentInstance.calendarDays.reloadData()
     }
     
     @IBAction func SelectedDateTime (_ : AnyObject){
