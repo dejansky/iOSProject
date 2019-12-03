@@ -483,6 +483,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wvH-1d-iRB"/>
                     </view>
+                    <connections>
+                        <outlet property="prevButton" destination="6L5-xX-3J3" id="srF-Ng-ZMe"/>
+                        <outlet property="prevDatePicker" destination="0GG-YZ-AaV" id="xKd-ZP-NaB"/>
+                        <outlet property="prevDatePickerLabel" destination="yQD-Gg-2S2" id="aqI-dW-i5X"/>
+                        <outlet property="prevText" destination="KjP-c5-ECg" id="rgp-uu-y5c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WMp-I7-zqQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
