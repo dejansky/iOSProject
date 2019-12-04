@@ -4,7 +4,7 @@ import Kingfisher
 
 class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    
+ 
     @IBOutlet weak var calendarDays: UICollectionView!
     @IBOutlet weak var currentMonthLabel: UILabel!
     
@@ -58,9 +58,14 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         }
         task.resume()
         
-        print("View did load !!!!")
-        
     }
+    
+    
+     @IBAction func bttnShowAllEvents(_ sender: Any) {
+        let tableView = self.storyboard?.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
+        self.navigationController?.pushViewController(tableView, animated: true)
+     }
+    
     
     // MARK: - Weather Display
     func setWeather(weather: String?, description: String?, temp: Int ) {

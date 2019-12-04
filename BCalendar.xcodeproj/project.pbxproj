@@ -20,6 +20,8 @@
 		274D2D8423914B79006905B9 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D2D8223914B79006905B9 /* Event+CoreDataClass.swift */; };
 		274D2D8523914B79006905B9 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D2D8323914B79006905B9 /* Event+CoreDataProperties.swift */; };
 		27CAE8292386F759002C08A8 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CAE8282386F759002C08A8 /* CalendarVars.swift */; };
+		27EFA93423979FE9006FD769 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EFA93323979FE9006FD769 /* TableViewCell.swift */; };
+		27EFA9362397A036006FD769 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EFA9352397A036006FD769 /* TableViewController.swift */; };
 		8352A1512390487400C68B6C /* BCalendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8352A14F2390487400C68B6C /* BCalendar.xcdatamodeld */; };
 		83CA9F132387DC7300EC8F7B /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA9F122387DC7300EC8F7B /* DateCollectionViewCell.swift */; };
 		FDAF1F932386CB3400494706 /* BCalendarMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF1F922386CB3400494706 /* BCalendarMainView.swift */; };
@@ -63,6 +65,8 @@
 		274D2D8223914B79006905B9 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
 		274D2D8323914B79006905B9 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		27CAE8282386F759002C08A8 /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
+		27EFA93323979FE9006FD769 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		27EFA9352397A036006FD769 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8352A1502390487400C68B6C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		83CA9F122387DC7300EC8F7B /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		FDAF1F922386CB3400494706 /* BCalendarMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCalendarMainView.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				27185C2F238FCDB8001FD1B1 /* DBHelper.swift */,
 				FDAF1F942386CB6500494706 /* AddEventView.swift */,
 				27445738237BF097006C8F8C /* Main.storyboard */,
+				27EFA93323979FE9006FD769 /* TableViewCell.swift */,
+				27EFA9352397A036006FD769 /* TableViewController.swift */,
 				2744573B237BF097006C8F8C /* Assets.xcassets */,
 				2744573D237BF097006C8F8C /* LaunchScreen.storyboard */,
 				8352A14F2390487400C68B6C /* BCalendar.xcdatamodeld */,
@@ -305,6 +311,7 @@
 			files = (
 				274D2D8523914B79006905B9 /* Event+CoreDataProperties.swift in Sources */,
 				27CAE8292386F759002C08A8 /* CalendarVars.swift in Sources */,
+				27EFA9362397A036006FD769 /* TableViewController.swift in Sources */,
 				FDAF1F952386CB6500494706 /* AddEventView.swift in Sources */,
 				274D2D8423914B79006905B9 /* Event+CoreDataClass.swift in Sources */,
 				FDAF1F932386CB3400494706 /* BCalendarMainView.swift in Sources */,
@@ -312,6 +319,7 @@
 				27185C30238FCDB8001FD1B1 /* DBHelper.swift in Sources */,
 				FDAF1F972386CBD900494706 /* PreviewEventView.swift in Sources */,
 				27445733237BF097006C8F8C /* AppDelegate.swift in Sources */,
+				27EFA93423979FE9006FD769 /* TableViewCell.swift in Sources */,
 				27445735237BF097006C8F8C /* SceneDelegate.swift in Sources */,
 				8352A1512390487400C68B6C /* BCalendar.xcdatamodeld in Sources */,
 			);
