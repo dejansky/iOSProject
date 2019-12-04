@@ -410,29 +410,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYf-rS-4OX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYf-rS-4OX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otc-yQ-ubO">
-                                                    <rect key="frame" x="0.0" y="40" width="414" height="40"/>
+                                                    <rect key="frame" x="0.0" y="56" width="414" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Otc-yQ-ubO" firstAttribute="height" secondItem="tgW-ni-d0p" secondAttribute="height" multiplier="50%" id="2qr-Ea-16Z"/>
-                                                <constraint firstAttribute="trailing" secondItem="SYf-rS-4OX" secondAttribute="trailing" id="37P-GI-Oi6"/>
-                                                <constraint firstAttribute="trailing" secondItem="Otc-yQ-ubO" secondAttribute="trailing" id="8vT-ui-BYt"/>
-                                                <constraint firstItem="SYf-rS-4OX" firstAttribute="height" secondItem="tgW-ni-d0p" secondAttribute="height" multiplier="50%" id="BDh-qd-DTG"/>
-                                                <constraint firstItem="Otc-yQ-ubO" firstAttribute="top" secondItem="SYf-rS-4OX" secondAttribute="bottom" id="Ork-2D-F5C"/>
-                                                <constraint firstItem="Otc-yQ-ubO" firstAttribute="leading" secondItem="tgW-ni-d0p" secondAttribute="leading" id="T4y-t6-pM3"/>
-                                                <constraint firstItem="SYf-rS-4OX" firstAttribute="leading" secondItem="tgW-ni-d0p" secondAttribute="leading" id="fW3-yY-yXb"/>
-                                                <constraint firstAttribute="bottom" secondItem="Otc-yQ-ubO" secondAttribute="bottom" id="qmD-np-Kf0"/>
-                                                <constraint firstItem="SYf-rS-4OX" firstAttribute="top" secondItem="tgW-ni-d0p" secondAttribute="top" id="ru5-Ci-Ldk"/>
+                                                <constraint firstItem="Otc-yQ-ubO" firstAttribute="height" secondItem="tgW-ni-d0p" secondAttribute="height" multiplier="30%" id="3TO-Xv-Iof"/>
+                                                <constraint firstItem="SYf-rS-4OX" firstAttribute="leading" secondItem="tgW-ni-d0p" secondAttribute="leading" id="4mF-2f-dfT"/>
+                                                <constraint firstAttribute="trailing" secondItem="SYf-rS-4OX" secondAttribute="trailing" id="5I4-o2-Gse"/>
+                                                <constraint firstAttribute="trailing" secondItem="Otc-yQ-ubO" secondAttribute="trailing" id="TNh-Tg-B56"/>
+                                                <constraint firstItem="Otc-yQ-ubO" firstAttribute="leading" secondItem="tgW-ni-d0p" secondAttribute="leading" id="WOj-WO-75g"/>
+                                                <constraint firstItem="SYf-rS-4OX" firstAttribute="top" secondItem="tgW-ni-d0p" secondAttribute="top" id="X54-2I-4hv"/>
+                                                <constraint firstItem="SYf-rS-4OX" firstAttribute="height" secondItem="tgW-ni-d0p" secondAttribute="height" multiplier="70%" id="iro-gZ-fir"/>
+                                                <constraint firstAttribute="bottom" secondItem="Otc-yQ-ubO" secondAttribute="bottom" id="l14-81-Lzi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
