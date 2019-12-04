@@ -263,6 +263,8 @@
                         <outlet property="CityNameLabel" destination="EHc-Oy-LmE" id="hOL-o1-b1X"/>
                         <outlet property="ConditionLabel" destination="oAG-EH-OyK" id="Cwj-zt-T6Z"/>
                         <outlet property="DegreesLabel" destination="0XX-qq-xjf" id="LvF-Vi-1Aq"/>
+                        <outlet property="bttnAddEvent" destination="IDP-D0-R49" id="vns-Le-ihv"/>
+                        <outlet property="bttnShowAllEvents" destination="bDZ-1n-AyY" id="A4L-8F-QUi"/>
                         <outlet property="calendarDays" destination="NRQ-jM-ZKy" id="gca-6g-XTL"/>
                         <outlet property="currentMonthLabel" destination="eIv-WY-gn6" id="QXl-58-mqN"/>
                     </connections>
@@ -311,13 +313,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fX-X5-HG5">
                                 <rect key="frame" x="0.0" y="404" width="414" height="404"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tHM-1l-rhN">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Event description..." translatesAutoresizingMaskIntoConstraints="NO" id="tHM-1l-rhN">
                                         <rect key="frame" x="15" y="10.000000000000014" width="384" height="242.33333333333337"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r67-ha-KQ6">
                                         <rect key="frame" x="138.66666666666669" y="323.33333333333337" width="136.66666666666669" height="40.333333333333314"/>

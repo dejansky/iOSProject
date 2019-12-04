@@ -8,6 +8,8 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     
     @IBOutlet weak var calendarDays: UICollectionView!
     @IBOutlet weak var currentMonthLabel: UILabel!
+    @IBOutlet weak var bttnAddEvent: UIButton!
+    @IBOutlet weak var bttnShowAllEvents: UIButton!
     
     let months = ["January", "February", "Mars", "April", "May", "Jun", "July", "August", "September", "October", "November", "December"]
     let weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
@@ -33,6 +35,11 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     override func viewDidLoad() {
         // MARK: - DateView
         super.viewDidLoad()
+        
+        //MARK: Design of elements
+        bttnAddEvent.layer.cornerRadius = 15
+        bttnShowAllEvents.layer.cornerRadius = 20
+        
         
         BCalendarMainView.currentInstance = self //This->
         
@@ -70,11 +77,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         
         
     }
-    
-    
-    
-    
-    
     
     
     // MARK: - Functions:
@@ -276,7 +278,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             if let eventYear = event.eventyear, let eventMonth = event.eventmonth, let eventDay = event.eventday, let intYear = Int(eventYear),
                 let intMonth = Int(eventMonth), let intDay = Int(eventDay){
                 
-                print("\(intDay) - \(intMonth) - \(intYear)")
                 if  currYear == intYear && Int(cell.DateLabel.text!) == intDay && currMonth + 1 == intMonth {
                     cell.backgroundColor = UIColor.green
                 }
@@ -285,13 +286,14 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         
         if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox && cell.backgroundColor == UIColor.green {
             cell.backgroundColor = UIColor.purple
+
         }
         
         if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox && cell.backgroundColor != UIColor.purple {
             cell.backgroundColor = UIColor.red
         }
         
-        
+        cell.layer.cornerRadius = 23
         
         return cell
     }

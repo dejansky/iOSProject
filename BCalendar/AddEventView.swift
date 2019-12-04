@@ -27,6 +27,10 @@ class AddEventView: UIViewController{
         super.viewDidLoad()
         DateTimeField.delegate = self
         
+        //MARK: Design of elements
+        bttnCreateEvent.layer.cornerRadius = 20
+        eventDescription.layer.cornerRadius = 20
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy"
         DateTimeField.text = formatter.string(from: DateTimePicker.date)
