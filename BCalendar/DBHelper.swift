@@ -34,4 +34,17 @@ class DBHelper{
         return event
     }
     
+    func deleteData(index:Int) -> [Event]{
+        var eventArray = getData()
+        context?.delete(eventArray[index])
+        eventArray.remove(at: index)
+        do {
+            try context?.save()
+        }
+        catch{
+            print("Cannot delete data")
+        }
+        return eventArray
+    }
+    
 }
