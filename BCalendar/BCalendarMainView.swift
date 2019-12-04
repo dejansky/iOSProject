@@ -37,8 +37,8 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         super.viewDidLoad()
         
         //MARK: Design of elements
-        bttnAddEvent.layer.cornerRadius = 15
-        bttnShowAllEvents.layer.cornerRadius = 20
+        bttnAddEvent.layer.cornerRadius = 12.5
+        bttnShowAllEvents.layer.cornerRadius = 17.5
         
         
         BCalendarMainView.currentInstance = self //This->
@@ -293,6 +293,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             cell.DateLabel.textColor = UIColor.white
         }
         
+        cell.layer.cornerRadius = 23
         
         
         return cell
