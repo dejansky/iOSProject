@@ -279,21 +279,21 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
                 let intMonth = Int(eventMonth), let intDay = Int(eventDay){
                 
                 if  currYear == intYear && Int(cell.DateLabel.text!) == intDay && currMonth + 1 == intMonth {
-                    cell.backgroundColor = UIColor.green
+                    cell.backgroundColor = UIColor.gray
                 }
             }
         }
         
-        if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox && cell.backgroundColor == UIColor.green {
-            cell.backgroundColor = UIColor.purple
-
-        }
-        
-        if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox && cell.backgroundColor != UIColor.purple {
+        if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox && cell.backgroundColor == UIColor.gray {
             cell.backgroundColor = UIColor.red
         }
         
-        cell.layer.cornerRadius = 23
+        if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox && cell.backgroundColor != UIColor.red {
+            cell.backgroundColor = UIColor.black
+            cell.DateLabel.textColor = UIColor.white
+        }
+        
+        
         
         return cell
     }

@@ -20,33 +20,37 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDP-D0-R49">
-                                <rect key="frame" x="311.33333333333331" y="103" width="82.666666666666686" height="30"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="+ Add">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDP-D0-R49">
+                                <rect key="frame" x="311.33333333333331" y="103" width="82.666666666666686" height="23"/>
+                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Add " image="plus" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="pwK-Wd-PR1" kind="presentation" id="InM-YW-Cgi"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRf-oi-IGW">
-                                <rect key="frame" x="0.0" y="142.99999999999997" width="414" height="406.33333333333326"/>
+                                <rect key="frame" x="0.0" y="145.99999999999997" width="414" height="406.33333333333326"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-we-NZC">
-                                        <rect key="frame" x="351.66666666666669" y="0.0" width="62.333333333333314" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="&gt;">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-we-NZC">
+                                        <rect key="frame" x="351.66666666666669" y="0.0" width="62.333333333333314" height="24.666666666666668"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" image="chevron.right.2" catalog="system">
                                             <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
                                             <action selector="nextMonth:" destination="3dz-DJ-XMa" eventType="touchUpInside" id="jZE-vA-xjC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR1-B6-2Jg">
-                                        <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="&lt;">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR1-B6-2Jg">
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="24.666666666666668"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" image="chevron.left.2" catalog="system">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
@@ -54,56 +58,57 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIv-WY-gn6">
-                                        <rect key="frame" x="62" y="0.0" width="289.66666666666669" height="30"/>
-                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <rect key="frame" x="62" y="0.0" width="289.66666666666669" height="24.666666666666668"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogk-ug-bt9">
-                                        <rect key="frame" x="0.0" y="30" width="59" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="24.666666666666657" width="59" height="22.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPK-NY-OJb">
-                                        <rect key="frame" x="59" y="30" width="59.333333333333343" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="59" y="24.666666666666657" width="59.333333333333343" height="22.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0f-pC-eBL">
-                                        <rect key="frame" x="118.33333333333331" y="30" width="59" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="118.33333333333331" y="24.666666666666657" width="59" height="22.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Th" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R07-cl-Um4">
-                                        <rect key="frame" x="177.33333333333334" y="30" width="59" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="177.33333333333334" y="24.666666666666657" width="59" height="22.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPD-s1-Zcw">
-                                        <rect key="frame" x="236.33333333333334" y="30" width="59.333333333333343" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="236.33333333333334" y="24.666666666666657" width="59.333333333333343" height="22.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Su" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kID-pL-Jli">
-                                        <rect key="frame" x="355" y="29.666666666666657" width="59" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="355" y="24.666666666666657" width="59" height="22.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24a-c0-gB6">
-                                        <rect key="frame" x="295.66666666666669" y="30" width="59" height="20.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="295.66666666666669" y="24.666666666666657" width="59" height="22.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NRQ-jM-ZKy">
-                                        <rect key="frame" x="0.0" y="51" width="414" height="355.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="47" width="414" height="359.33333333333331"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="5" id="mj6-SL-tlA">
                                             <size key="itemSize" width="45" height="45"/>
@@ -112,7 +117,7 @@
                                             <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <view key="backgroundView" contentMode="scaleToFill" id="IAx-Ww-tbE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="355.33333333333331"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="359.33333333333331"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </view>
                                         <cells>
@@ -124,8 +129,8 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tx-GA-lhH">
-                                                            <rect key="frame" x="17.666666666666668" y="12" width="10" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="16.333333333333332" y="12.333333333333334" width="12.333333333333332" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -152,6 +157,7 @@
                                     <constraint firstAttribute="trailing" secondItem="NRQ-jM-ZKy" secondAttribute="trailing" id="20a-tc-MoI"/>
                                     <constraint firstItem="NR1-B6-2Jg" firstAttribute="height" secondItem="eIv-WY-gn6" secondAttribute="height" multiplier="100%" id="2e4-au-s8o"/>
                                     <constraint firstItem="x0f-pC-eBL" firstAttribute="width" secondItem="oRf-oi-IGW" secondAttribute="width" multiplier="0.1428" id="2lK-Iv-FOB"/>
+                                    <constraint firstItem="kID-pL-Jli" firstAttribute="top" secondItem="Gbn-we-NZC" secondAttribute="bottom" id="77B-Nt-oqH"/>
                                     <constraint firstItem="24a-c0-gB6" firstAttribute="width" secondItem="oRf-oi-IGW" secondAttribute="width" multiplier="0.1428" id="7Qe-B9-mYk"/>
                                     <constraint firstItem="PPK-NY-OJb" firstAttribute="width" secondItem="oRf-oi-IGW" secondAttribute="width" multiplier="14.28%" id="Ah9-2m-y1a"/>
                                     <constraint firstItem="PPK-NY-OJb" firstAttribute="leading" secondItem="ogk-ug-bt9" secondAttribute="trailing" id="Bte-7x-BeC"/>
@@ -186,12 +192,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CD5-9h-fZF">
-                                <rect key="frame" x="0.0" y="549.33333333333337" width="414" height="312.66666666666663"/>
+                                <rect key="frame" x="0.0" y="552.33333333333337" width="414" height="309.66666666666663"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDZ-1n-AyY">
-                                        <rect key="frame" x="124.33333333333333" y="231.33333333333326" width="165.33333333333337" height="37.666666666666686"/>
-                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Show all events">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDZ-1n-AyY">
+                                        <rect key="frame" x="124.33333333333333" y="229" width="165.33333333333337" height="37.333333333333314"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Events" image="star" catalog="system">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -199,21 +207,21 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Na" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHc-Oy-LmE">
-                                        <rect key="frame" x="0.0" y="20" width="414" height="71"/>
+                                        <rect key="frame" x="0.0" y="20" width="414" height="28.333333333333329"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Degrees" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XX-qq-xjf">
-                                        <rect key="frame" x="0.0" y="101" width="207" height="22.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="58.33333333333325" width="207" height="22.666666666666664"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAG-EH-OyK">
-                                        <rect key="frame" x="207" y="101" width="207" height="22.333333333333329"/>
+                                        <rect key="frame" x="207" y="58.333333333333265" width="207" height="22.333333333333336"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                         <nil key="textColor"/>
@@ -241,7 +249,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="CD5-9h-fZF" firstAttribute="top" secondItem="oRf-oi-IGW" secondAttribute="bottom" id="0eO-M2-V0y"/>
-                            <constraint firstItem="oRf-oi-IGW" firstAttribute="top" secondItem="IDP-D0-R49" secondAttribute="bottom" constant="10" id="2r1-eV-gOA"/>
+                            <constraint firstItem="oRf-oi-IGW" firstAttribute="top" secondItem="IDP-D0-R49" secondAttribute="bottom" constant="20" id="2r1-eV-gOA"/>
                             <constraint firstItem="xW2-oR-Uuu" firstAttribute="bottom" secondItem="CD5-9h-fZF" secondAttribute="bottom" id="76d-yY-K2s"/>
                             <constraint firstItem="CD5-9h-fZF" firstAttribute="leading" secondItem="xW2-oR-Uuu" secondAttribute="leading" id="BB1-T6-gBD"/>
                             <constraint firstItem="Qun-GO-0F4" firstAttribute="top" secondItem="xW2-oR-Uuu" secondAttribute="top" id="MqY-wh-6NA"/>
@@ -263,8 +271,6 @@
                         <outlet property="CityNameLabel" destination="EHc-Oy-LmE" id="hOL-o1-b1X"/>
                         <outlet property="ConditionLabel" destination="oAG-EH-OyK" id="Cwj-zt-T6Z"/>
                         <outlet property="DegreesLabel" destination="0XX-qq-xjf" id="LvF-Vi-1Aq"/>
-                        <outlet property="bttnAddEvent" destination="IDP-D0-R49" id="vns-Le-ihv"/>
-                        <outlet property="bttnShowAllEvents" destination="bDZ-1n-AyY" id="A4L-8F-QUi"/>
                         <outlet property="calendarDays" destination="NRQ-jM-ZKy" id="gca-6g-XTL"/>
                         <outlet property="currentMonthLabel" destination="eIv-WY-gn6" id="QXl-58-mqN"/>
                     </connections>
@@ -289,13 +295,15 @@
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="VEW-TZ-T1X">
                                         <rect key="frame" x="0.0" y="10.000000000000014" width="414" height="242.33333333333337"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="SelectedDateTime:" destination="pwK-Wd-PR1" eventType="valueChanged" id="nCp-zD-SqP"/>
                                         </connections>
                                     </datePicker>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date and time picked" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qbD-gt-TcT">
                                         <rect key="frame" x="8" y="266" width="398" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -313,18 +321,21 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fX-X5-HG5">
                                 <rect key="frame" x="0.0" y="404" width="414" height="404"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Event description..." translatesAutoresizingMaskIntoConstraints="NO" id="tHM-1l-rhN">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tHM-1l-rhN">
                                         <rect key="frame" x="15" y="10.000000000000014" width="384" height="242.33333333333337"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r67-ha-KQ6">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r67-ha-KQ6">
                                         <rect key="frame" x="138.66666666666669" y="323.33333333333337" width="136.66666666666669" height="40.333333333333314"/>
-                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <state key="normal" title="Create Event">
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Add Event" image="plus" catalog="system">
                                             <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -412,22 +423,22 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYf-rS-4OX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="10" y="0.0" width="394" height="56"/>
+                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otc-yQ-ubO">
                                                     <rect key="frame" x="0.0" y="56" width="414" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Otc-yQ-ubO" firstAttribute="height" secondItem="tgW-ni-d0p" secondAttribute="height" multiplier="30%" id="3TO-Xv-Iof"/>
-                                                <constraint firstItem="SYf-rS-4OX" firstAttribute="leading" secondItem="tgW-ni-d0p" secondAttribute="leading" id="4mF-2f-dfT"/>
-                                                <constraint firstAttribute="trailing" secondItem="SYf-rS-4OX" secondAttribute="trailing" id="5I4-o2-Gse"/>
+                                                <constraint firstItem="SYf-rS-4OX" firstAttribute="leading" secondItem="tgW-ni-d0p" secondAttribute="leading" constant="10" id="4mF-2f-dfT"/>
+                                                <constraint firstAttribute="trailing" secondItem="SYf-rS-4OX" secondAttribute="trailing" constant="10" id="5I4-o2-Gse"/>
                                                 <constraint firstAttribute="trailing" secondItem="Otc-yQ-ubO" secondAttribute="trailing" id="TNh-Tg-B56"/>
                                                 <constraint firstItem="Otc-yQ-ubO" firstAttribute="leading" secondItem="tgW-ni-d0p" secondAttribute="leading" id="WOj-WO-75g"/>
                                                 <constraint firstItem="SYf-rS-4OX" firstAttribute="top" secondItem="tgW-ni-d0p" secondAttribute="top" id="X54-2I-4hv"/>
@@ -466,4 +477,10 @@
             <point key="canvasLocation" x="2328.985507246377" y="455.35714285714283"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chevron.left.2" catalog="system" width="64" height="52"/>
+        <image name="chevron.right.2" catalog="system" width="64" height="52"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="star" catalog="system" width="64" height="58"/>
+    </resources>
 </document>
