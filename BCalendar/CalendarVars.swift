@@ -2,6 +2,8 @@ import Foundation
 
 
 
+// MARK: - Global variables
+
 let currentDate = Date()
 let userCalendar = Calendar.current
 

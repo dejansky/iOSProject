@@ -29,9 +29,8 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     @IBOutlet weak var DegreesLabel: UILabel!
     
     
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
-        
-        
         // MARK: - DateView
         super.viewDidLoad()
         
@@ -43,6 +42,8 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         if currWeekDay == 0 {
             currWeekDay = 7
         }
+        
+        
         GetStartDayDatePosition()
         
         // MARK: - WeatherView API
@@ -52,31 +53,36 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
                 do {
                     guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String : Any] else { return }
                     guard let weatherDetails = json["weather"] as? [[String: Any]], let weatherMain = json["main"] as? [String: Any] else {return}
+                    
                     let temp = Int(weatherMain["temp"] as? Double ?? 0)
                     let description = (weatherDetails.first?["description"] as? String)
-                    DispatchQueue.main.async {
+                    
+                    DispatchQueue.main.async{
                         self.setWeather(weather: weatherDetails.first?["main"] as? String, description: description, temp: temp)
                     }
-                    
-                } catch { print("Error fetching data...") }
+                }
+                catch {
+                    print("Error fetching data...")
+                }
             }
         }
         task.resume()
-     
+        
         
     }
     
+    
+    
+    
+    
+    
+    
+    // MARK: - Functions:
+    // MArk: - ViewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         calendarDays.reloadData()
     }
-    
-    
-     @IBAction func bttnShowAllEvents(_ sender: Any) {
-        let tableView = self.storyboard?.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
-        self.navigationController?.pushViewController(tableView, animated: true)
-     }
-    
     
     // MARK: - Weather Display
     func setWeather(weather: String?, description: String?, temp: Int ) {
@@ -85,14 +91,13 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         CityNameLabel.text = "Jönköping"
     }
     
-    
     // MARK: - Kelvin to Celsius
     func KelvinToCelcius(temp: Int) -> Int{
         let temp = temp - 273
         return temp
     }
     
-    
+    // MARK: - Is Leap Year
     func isLeapYear(thisYear: Int) -> Bool {
         let thisYearHere = thisYear
         for i in LeapYearList {
@@ -102,8 +107,46 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         }
         return false
     }
+    // MARK: - GetStartDatePosition()
+    func GetStartDayDatePosition() {
+        switch Direction {
+        case 0:
+            NumberOfEmptyBox = currWeekDay
+            DayCounter = currDay
+            while DayCounter > 0 {
+                NumberOfEmptyBox = NumberOfEmptyBox - 1
+                DayCounter = DayCounter - 1
+                if NumberOfEmptyBox == 0 {
+                    NumberOfEmptyBox = 7
+                }
+            }
+            if NumberOfEmptyBox == 7 {
+                NumberOfEmptyBox = 0
+            }
+            PositionIndex = NumberOfEmptyBox
+        case 1...:
+            NextNumberOfEmptyBox = (PositionIndex + monthEndDays[currMonth]) % 7
+            PositionIndex = NextNumberOfEmptyBox
+        case -1:
+            PreviousNumberOfEmptyBox = (7 - (monthEndDays[currMonth] - PositionIndex)%7)
+            if PreviousNumberOfEmptyBox == 7 {
+                PreviousNumberOfEmptyBox = 0
+            }
+            PositionIndex = PreviousNumberOfEmptyBox
+        default:
+            fatalError()
+        }
+    }
     
-    // MARK: - Date
+    
+    // MARK: - Actions
+    // MARK: - Button Show All Events
+    @IBAction func bttnShowAllEvents(_ sender: Any) {
+        let tableView = self.storyboard?.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
+        self.navigationController?.pushViewController(tableView, animated: true)
+    }
+    
+    // MARK: - Button Next Month
     @IBAction func nextMonth(_ sender: Any) {
         switch currentMonth {
         case "December": // In case the currentMont is December applythe following rules
@@ -139,7 +182,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     
-    // MARK: - Button Previous
+    // MARK: - Button Previous Month
     @IBAction func prevMonth(_ sender: Any) {
         
         switch currentMonth {
@@ -174,39 +217,10 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         
     }
     
-    // MARK: - GetStartDatePosition()
-    func GetStartDayDatePosition() {
-        switch Direction {
-        case 0:
-            NumberOfEmptyBox = currWeekDay
-            DayCounter = currDay
-            while DayCounter > 0 {
-                NumberOfEmptyBox = NumberOfEmptyBox - 1
-                DayCounter = DayCounter - 1
-                if NumberOfEmptyBox == 0 {
-                    NumberOfEmptyBox = 7
-                }
-            }
-            if NumberOfEmptyBox == 7 {
-                NumberOfEmptyBox = 0
-            }
-            PositionIndex = NumberOfEmptyBox
-        case 1...:
-            NextNumberOfEmptyBox = (PositionIndex + monthEndDays[currMonth]) % 7
-            PositionIndex = NextNumberOfEmptyBox
-        case -1:
-            PreviousNumberOfEmptyBox = (7 - (monthEndDays[currMonth] - PositionIndex)%7)
-            if PreviousNumberOfEmptyBox == 7 {
-                PreviousNumberOfEmptyBox = 0
-            }
-            PositionIndex = PreviousNumberOfEmptyBox
-        default:
-            fatalError()
-        }
-    }
     
     
-    // MARK: - collectionView
+    
+    // MARK: - CollectionView NumberOfItemsSection
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch Direction {
         case 0:
@@ -222,7 +236,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         
     }
     
-    // MARK: - collectionView Cells
+    // MARK: - CollectionView CellForItem
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Calendar", for: indexPath) as! DateCollectionViewCell
         
@@ -258,28 +272,24 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             break
         }
         
-        
-        //MARK: - func new color
-        
-        for event in events{
+        for event in events {
             if let eventYear = event.eventyear, let eventMonth = event.eventmonth, let eventDay = event.eventday, let intYear = Int(eventYear),
                 let intMonth = Int(eventMonth), let intDay = Int(eventDay){
+                
                 print("\(intDay) - \(intMonth) - \(intYear)")
                 if  currYear == intYear && Int(cell.DateLabel.text!) == intDay && currMonth + 1 == intMonth {
                     cell.backgroundColor = UIColor.green
                 }
-                if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox {
-                    cell.backgroundColor = UIColor.red
-                }
-                
-                if (currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox)  && (currYear == intYear && Int(cell.DateLabel.text!) == intDay && currMonth + 1 == intMonth){
-                    cell.backgroundColor = UIColor.purple
-                }
-                
             }
-            
         }
         
+        if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox && cell.backgroundColor == UIColor.green {
+            cell.backgroundColor = UIColor.purple
+        }
+        
+        if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox && cell.backgroundColor != UIColor.purple {
+            cell.backgroundColor = UIColor.red
+        }
         
         
         

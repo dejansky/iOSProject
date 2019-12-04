@@ -3,6 +3,8 @@ import Foundation
 import CoreData
 import UIKit
 
+//MARK: - CRUD Operations
+
 class DBHelper{
     static var shareInstance = DBHelper()
     let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext

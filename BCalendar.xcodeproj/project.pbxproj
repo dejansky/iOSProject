@@ -26,7 +26,6 @@
 		83CA9F132387DC7300EC8F7B /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA9F122387DC7300EC8F7B /* DateCollectionViewCell.swift */; };
 		FDAF1F932386CB3400494706 /* BCalendarMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF1F922386CB3400494706 /* BCalendarMainView.swift */; };
 		FDAF1F952386CB6500494706 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF1F942386CB6500494706 /* AddEventView.swift */; };
-		FDAF1F972386CBD900494706 /* PreviewEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF1F962386CBD900494706 /* PreviewEventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +70,6 @@
 		83CA9F122387DC7300EC8F7B /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		FDAF1F922386CB3400494706 /* BCalendarMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCalendarMainView.swift; sourceTree = "<group>"; };
 		FDAF1F942386CB6500494706 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
-		FDAF1F962386CBD900494706 /* PreviewEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewEventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +127,6 @@
 				FDAF1F922386CB3400494706 /* BCalendarMainView.swift */,
 				27445732237BF097006C8F8C /* AppDelegate.swift */,
 				27445734237BF097006C8F8C /* SceneDelegate.swift */,
-				FDAF1F962386CBD900494706 /* PreviewEventView.swift */,
 				83CA9F122387DC7300EC8F7B /* DateCollectionViewCell.swift */,
 				27185C2F238FCDB8001FD1B1 /* DBHelper.swift */,
 				FDAF1F942386CB6500494706 /* AddEventView.swift */,
@@ -317,7 +314,6 @@
 				FDAF1F932386CB3400494706 /* BCalendarMainView.swift in Sources */,
 				83CA9F132387DC7300EC8F7B /* DateCollectionViewCell.swift in Sources */,
 				27185C30238FCDB8001FD1B1 /* DBHelper.swift in Sources */,
-				FDAF1F972386CBD900494706 /* PreviewEventView.swift in Sources */,
 				27445733237BF097006C8F8C /* AppDelegate.swift in Sources */,
 				27EFA93423979FE9006FD769 /* TableViewCell.swift in Sources */,
 				27445735237BF097006C8F8C /* SceneDelegate.swift in Sources */,

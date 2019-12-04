@@ -9,7 +9,7 @@ class AddEventView: UIViewController{
     
     @IBOutlet weak var bttnCreateEvent: UIButton!
     
-    //MARK: - Seperate the date
+    //MARK: - Fetch and Separate data from datepicker
     func dataSeperator() -> (eventday:String, eventmonth:String, eventyear:String){
         
         let formatter = DateFormatter()
@@ -33,7 +33,7 @@ class AddEventView: UIViewController{
         //Format to strings
     }
     
-
+// MARK: - Create Event
     @IBAction func bttnCreateEvent(_ sender: Any) {
         
         let dict = ["eventday":dataSeperator().eventday, "eventmonth":dataSeperator().eventmonth as Any, "eventyear":dataSeperator().eventyear ,"eventdescription": eventDescription.text as Any] as [String : Any]
