@@ -24,8 +24,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     var LeapYearList = [2012,2016,2020,2024,2028,2032]
     
     
-    
-    
     @IBOutlet weak var CityNameLabel: UILabel!
     @IBOutlet weak var ConditionLabel: UILabel!
     @IBOutlet weak var DegreesLabel: UILabel!
@@ -64,10 +62,15 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         }
         task.resume()
         
-        print("View did load !!!!")
-        
     }
-
+    
+    
+     @IBAction func bttnShowAllEvents(_ sender: Any) {
+        let tableView = self.storyboard?.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
+        self.navigationController?.pushViewController(tableView, animated: true)
+     }
+    
+    
     // MARK: - Weather Display
     func setWeather(weather: String?, description: String?, temp: Int ) {
         ConditionLabel.text = description ?? "..."
@@ -257,7 +260,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
             }
         }
         
-        /////////////////////////////////////////////////////////////////////////////////////////
         if currentMonth == months[userCalendar.component(.month, from: currentDate)-1] && currYear == userCalendar.component(.year, from: currentDate) && indexPath.row + 1 == currDay + NumberOfEmptyBox {
             cell.backgroundColor = UIColor.red
         }
