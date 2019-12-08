@@ -30,10 +30,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     @IBOutlet weak var ConditionLabel: UILabel!
     @IBOutlet weak var DegreesLabel: UILabel!
     
-    
-    // MARK: - ViewDidLoad
     override func viewDidLoad() {
-        // MARK: - DateView
         super.viewDidLoad()
         
         //MARK: Design of elements
@@ -49,7 +46,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         if currWeekDay == 0 {
             currWeekDay = 7
         }
-        
         
         GetStartDayDatePosition()
         
@@ -79,27 +75,23 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     
-    // MARK: - Functions:
-    // MArk: - ViewWillAppear
+    // MARK: - Helper Functions:
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         calendarDays.reloadData()
     }
     
-    // MARK: - Weather Display
     func setWeather(weather: String?, description: String?, temp: Int ) {
         ConditionLabel.text = description ?? "..."
         DegreesLabel.text = "\(KelvinToCelcius(temp: temp)) °C"
         CityNameLabel.text = "Jönköping"
     }
     
-    // MARK: - Kelvin to Celsius
     func KelvinToCelcius(temp: Int) -> Int{
         let temp = temp - 273
         return temp
     }
     
-    // MARK: - Is Leap Year
     func isLeapYear(thisYear: Int) -> Bool {
         let thisYearHere = thisYear
         for i in LeapYearList {
@@ -109,6 +101,7 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
         }
         return false
     }
+   
     // MARK: - GetStartDatePosition()
     func GetStartDayDatePosition() {
         switch Direction {
@@ -141,14 +134,14 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     
-    // MARK: - Actions
-    // MARK: - Button Show All Events
+    // MARK: - Button actions
+    
     @IBAction func bttnShowAllEvents(_ sender: Any) {
         let tableView = self.storyboard?.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
         self.navigationController?.pushViewController(tableView, animated: true)
     }
     
-    // MARK: - Button Next Month
+
     @IBAction func nextMonth(_ sender: Any) {
         switch currentMonth {
         case "December": // In case the currentMont is December applythe following rules
@@ -184,7 +177,6 @@ class BCalendarMainView: UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     
-    // MARK: - Button Previous Month
     @IBAction func prevMonth(_ sender: Any) {
         
         switch currentMonth {

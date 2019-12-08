@@ -1,4 +1,3 @@
-
 import UIKit
 
 class AddEventView: UIViewController{
@@ -60,7 +59,6 @@ class AddEventView: UIViewController{
     //Dismisses the keyboard when editing has finished
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        //self.view.endEditing(true)
         self.eventDescription.resignFirstResponder()
     }
 }

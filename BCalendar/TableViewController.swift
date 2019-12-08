@@ -1,11 +1,3 @@
-//
-//  TableViewController.swift
-//  BCalendar
-//
-//  Created by Vida Rashidi on 2019-12-04.
-//  Copyright © 2019 Project. All rights reserved.
-//
-
 import UIKit
 
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{

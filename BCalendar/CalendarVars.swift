@@ -1,7 +1,5 @@
 import Foundation
 
-
-
 // MARK: - Global variables
 
 let currentDate = Date()
